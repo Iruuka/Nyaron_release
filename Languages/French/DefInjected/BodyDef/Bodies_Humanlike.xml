@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Nyaron.label>냐론</Nyaron.label>
+  <Nyaron.corePart.parts.tail.customLabel>queue</Nyaron.corePart.parts.tail.customLabel>
+  <Nyaron.corePart.parts.left_lung.customLabel>poumon gauche</Nyaron.corePart.parts.left_lung.customLabel>
+  <Nyaron.corePart.parts.right_lung.customLabel>poumon droit</Nyaron.corePart.parts.right_lung.customLabel>
+  <Nyaron.corePart.parts.left_kidney.customLabel>rein gauche</Nyaron.corePart.parts.left_kidney.customLabel>
+  <Nyaron.corePart.parts.right_kidney.customLabel>rein droit</Nyaron.corePart.parts.right_kidney.customLabel>
+  <Nyaron.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>oeil gauche</Nyaron.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>
+  <Nyaron.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>oeil droit</Nyaron.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>
+  <Nyaron.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>oreille gauche</Nyaron.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>
+  <Nyaron.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>oreille droite</Nyaron.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.customLabel>épaule gauche</Nyaron.corePart.parts.left_shoulder.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>clavicule gauche</Nyaron.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.customLabel>bras gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>humérus gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>radius gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>main gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>auriculaire gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>annulaire gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>majeur gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>index gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>
+  <Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>pouce gauche</Nyaron.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.customLabel>épaule droite</Nyaron.corePart.parts.right_shoulder.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>clavicule droite</Nyaron.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.customLabel>bras droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>humérus droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>radius droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>main droite</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>auriculaire droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>annulaire droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>majeur droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>index droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>
+  <Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>pouce droit</Nyaron.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>
+  <Nyaron.corePart.parts.left_leg.customLabel>jambe gauche</Nyaron.corePart.parts.left_leg.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_femur.customLabel>fémur gauche</Nyaron.corePart.parts.left_leg.parts.left_femur.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_tibia.customLabel>tibia gauche</Nyaron.corePart.parts.left_leg.parts.left_tibia.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.customLabel>pied gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>petit orteil gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>quatrième orteil gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>orteil du milieu gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>second orteil gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>
+  <Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>gros orteil gauche</Nyaron.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>
+  <Nyaron.corePart.parts.right_leg.customLabel>jambe droite</Nyaron.corePart.parts.right_leg.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_femur.customLabel>fémur droit</Nyaron.corePart.parts.right_leg.parts.right_femur.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_tibia.customLabel>tibia droit</Nyaron.corePart.parts.right_leg.parts.right_tibia.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.customLabel>pied droit</Nyaron.corePart.parts.right_leg.parts.right_foot.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>petit orteil droit</Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>quatrième orteil droit</Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>orteil du milieu droit</Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>second orteil droit</Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
+  <Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>gros orteil droit</Nyaron.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
+  <Nyaron.corePart.parts.right_lower_shoulder.customLabel>bas de l'épaule droite</Nyaron.corePart.parts.right_lower_shoulder.customLabel>
+  <Nyaron.corePart.parts.left_lower_shoulder.customLabel>bas de l'épaule gauche</Nyaron.corePart.parts.left_lower_shoulder.customLabel>
+  <Nyaron.corePart.parts.Right_Abdominal_Cavity.customLabel>cavité abdominale droite</Nyaron.corePart.parts.Right_Abdominal_Cavity.customLabel>
+  <Nyaron.corePart.parts.Right_Chest_Cavity.customLabel>cavité thoracique droite</Nyaron.corePart.parts.Right_Chest_Cavity.customLabel>
+  <Nyaron.corePart.parts.Left_Chest_Cavity.customLabel>cavité thoracique gauche</Nyaron.corePart.parts.Left_Chest_Cavity.customLabel>
+  <Nyaron.corePart.parts.left_abdominal_cavity.customLabel>cavité abdominale gauche</Nyaron.corePart.parts.left_abdominal_cavity.customLabel>
+</LanguageData>

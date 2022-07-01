@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+   <Shockbullet.label>충격탄</Shockbullet.label> 
+   <Shockbullet.deathMessage>{0} s'est fait tier comme un lapin.</Shockbullet.deathMessage> 
+   <EnergyBall.label>EnergyBall</EnergyBall.label> 
+   <EnergyBall.deathMessage>{0} est mort par balle.</EnergyBall.deathMessage> 
+   <EnergyBullet.label>EnergyBullet</EnergyBullet.label> 
+   <EnergyBullet.deathMessage>{0} est mort par balle.</EnergyBullet.deathMessage> 
+   <Nr_Flak.label>Flak</Nr_Flak.label> 
+   <Nr_Flak.deathMessage>{0} a été explosé.</Nr_Flak.deathMessage> 
+
+</LanguageData>
