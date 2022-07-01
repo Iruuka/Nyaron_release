@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ApparelBase">
+    <defName>Nr_SUniform</defName>
+    <label>입고 있던 옷</label>
+    <description>입고 있던 옷입니다.</description>
+    <graphicData>
+      <texPath>Things/Apparel/CatSUniform/CatSUniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>NrApparel</li>
+    </thingCategories>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+                <li>Neck</li>
+				<li>Shoulders</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparel/CatSUniform/CatSUniform</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+        <li>Nyaron_Starting</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+</Defs>

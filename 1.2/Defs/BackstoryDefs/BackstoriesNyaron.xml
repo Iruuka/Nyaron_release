@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- 냐론 디폴트 -->
+<AlienRace.BackstoryDef Name="Nyaron_BaseBackstory" Abstract="True">
+		<disallowedTraits>
+			<li>
+				<defName>Beauty</defName>
+				<degree>-2</degree>
+				<chance>100</chance>
+			</li>
+			<li>
+				<defName>Undergrounder</defName>
+				<degree>0</degree>
+				<chance>100</chance>
+			</li>
+		</disallowedTraits>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</AlienRace.BackstoryDef>
+<!-- 냐론 유년기 -->
+ 
+ <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Child_Incubator</defName>
+    <title>Nyaron Incubator Baby</title>
+	<titleShort>Nyaron Incubator Baby</titleShort>
+    <baseDescription>a Embrio of nyaron grows up to 12 years old in the incubator.It takes a week and her memory is imprinted through mechanite.</baseDescription>
+	
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	
+	
+	<slot>Childhood</slot>
+	<spawnCategories>
+	  <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+	  <li>Nyaron_Standard_Leader</li>
+    </spawnCategories>
+ </AlienRace.BackstoryDef>
+
+<!-- 냐론 성년기 -->
+
+
+<AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Leader1</defName>
+    <title>Nyaron Leader</title>
+	<titleShort>Nyaron Leader</titleShort>
+    <baseDescription>[PAWN_nameDef] is The chief of wandering nyarons. There are no laws and rules there, only following the strongest.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>ManualDumb</li>
+    </workDisables>
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard_Leader</li>
+    </spawnCategories>
+ </AlienRace.BackstoryDef>
+ 
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Soldier</defName>
+    <title>Nyaron Soldier</title>
+    <titleShort>Nyaron Soldier</titleShort>
+    <baseDescription>[PAWN_nameDef] 's memory contained various weapons, tactics and nyan-nyan martial arts.Even weapons she touches, fighting on the battlefield, seem so familiar to her.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>Intellectual</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Dancer</defName>
+    <title>Nyaron Dancer</title>
+    <titleShort>Nyaron Dancer</titleShort>
+    <baseDescription>[PAWN_nameDef] is a dance machine . I think it's much better than watching boring a cathode ray tubes.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>-1</amount>
+		</li>
+	</skillGains>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+	  <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+    
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Singer</defName>
+    <title>Nyaron Idol Trainee</title>
+    <titleShort>Nyaron Idol Trainee</titleShort>
+    <baseDescription>[PAWN_nameDef] was being shipped to appear on an ambitious TV program by a major space agency. The plan was canceled due to an unfortunate accident, but she still thinks it was produced by the agency.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>5</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>5</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-2</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>Cooking</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+	  <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+	  
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+      
+	  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Hunter</defName>
+    <title>Nyaron Rat Hunter</title>
+    <titleShort>Nyaron Rat Hunter</titleShort>
+    <baseDescription>[PAWN_nameDef] was good at handling guns and never returned empty-handed when hunting. But every time she comes back late at night, she enjoys playing with her prey, especially poor rats.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		</li>
+	</skillGains>
+	
+	<workDisables>
+        <li>PlantWork</li>
+    </workDisables>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+    <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Police</defName>
+    <title>Nyaron Police</title>
+    <titleShort>Nyaron Police</titleShort>
+    <baseDescription>[PAWN_nameDef] was ordered by the police station because there was not enough people to handle "security" in the big city. Most police had families to support, so always  junk security robot and this police girls handled "incident".</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>5</amount>
+		</li>
+	</skillGains>
+	
+	<workDisables>
+        <li>Artistic</li>
+    </workDisables>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+	  <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+
+    <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Exproler</defName>
+    <title>Nyaron Expedition Crew</title>
+    <titleShort>Nyaron Expedition Crew</titleShort>
+    <baseDescription>[PAWN_nameDef] was going to join an expedition investigating the world's most dangerous place.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Cooking</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+	  <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_CustomMaid</defName>
+    <title>Nyaron Custom-ordered maid</title>
+    <titleShort>Nyaron maid</titleShort>
+    <baseDescription>[PAWN_nameDef] was to spend a rosy day with its owner at "The Empire," the most social club in the universe. Although she did not meet him, she will find a new owner in this world.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Cooking</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Petgirl</defName>
+    <title>Nyaron Pet Girl</title>
+    <titleShort>Nyaron Pet Girl</titleShort>
+    <baseDescription>Meow.</baseDescription>
+	<workDisables>
+        <li>Animals</li>
+		<li>Cleaning</li>
+		<li>Cooking</li>
+		<li>Crafting</li>
+		<li>Firefighting</li>
+		<li>Intellectual</li>
+		<li>ManualDumb</li>
+		<li>ManualSkilled</li>
+		<li>Mining</li>
+		<li>PlantWork</li>
+		<li>Social</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Nekopara</defName>
+    <title>Nyaron Patissier Cat</title>
+    <titleShort>Nyaron Patissier Cat</titleShort>
+    <baseDescription>Somewhere in the universe, bakeries use cats as staff. [PAWN_nameDef] was scheduled to be delivered to one of the store's franchises.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Cooking</defName>
+			<amount>4</amount>
+		</li>
+	</skillGains>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  
+<AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Abandoned_Cat</defName>
+    <title>Nyaron Abandoned Cat</title>
+    <titleShort>Nyaron Abandoned Cat</titleShort>
+    <baseDescription>Unable to withstand the violence of his owner, [PAWN_nameDef] hid in a regular cargo ship to "abandon" herself.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>5</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>5</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Mobile_Crew</defName>
+    <title>Nyaron Mobile Strike crew</title>
+    <titleShort>Nyaron Strike crew</titleShort>
+    <baseDescription>Nyaron Strike crew.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>8</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Nurse</defName>
+    <title>Nyaron Nurse</title>
+    <titleShort>Nyaron Nurse</titleShort>
+    <baseDescription>Nyaron Nurse.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Medicine</defName>
+			<amount>5</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+    <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Builder</defName>
+    <title>Nyaron Builder</title>
+    <titleShort>Nyaron Builder</titleShort>
+    <baseDescription>Nyaron Builder.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+				<li>
+			<defName>Construction</defName>
+			<amount>6</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Narco</defName>
+    <title>정구지</title>
+    <titleShort>정구지</titleShort>
+    <baseDescription>우주아이돌 정구지입니다.</baseDescription>
+	<workDisables>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Pawn_bios</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+</Defs>

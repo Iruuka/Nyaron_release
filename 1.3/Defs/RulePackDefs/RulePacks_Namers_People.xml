@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerNyaronUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>NameNyaronFemaleFirst->Names/Nyaron_First_Female</li>
+        <li>NameNyaronLastInit->Names/Nyaron_Last_Init</li>
+		<li>NameNyaronLastAlp->Names/Nyaron_Last_Alp</li>
+		<li>NameNyaronLastNum->Names/Nyaron_Last_Num</li>
+		
+		<!--
+		<li>NameNyaronOutlanderNickSolo->Names/Nyaron_Outlander_Nick_Solo</li>
+		<li>NameNyaronOutlanderNickPrefix->Names/Nyaron_Outlander_Nick_Prefix</li>
+		<li>NameNyaronOutlanderNickMiddle->Names/Nyaron_Outlander_Nick_Middle</li>
+		<li>NameNyaronOutlanderNickSuffix->Names/Nyaron_Outlander_Nick_Suffix</li>
+		-->
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+  <RulePackDef>
+    <defName>NamerNyaronLastNamer</defName>
+	    <include>
+      <li>NamerNyaronUtility</li>
+    </include>
+    <rulePack>
+		<rulesStrings>
+		<li>NyaronLastNamer->[NameNyaronLastInit][NameNyaronLastAlp][NameNyaronLastNum][NameNyaronLastNum][NameNyaronLastNum]</li>
+		</rulesStrings>
+    </rulePack>
+  </RulePackDef>
+   <!-- 
+   
+   
+    <RulePackDef>
+    <defName>NamerNyaronNickname</defName>
+	    <include>
+      <li>NamerNyaronUtility</li>
+    </include>
+    <rulePack>
+		<rulesStrings>
+		<li>NyaronNickNamerFull->[NameNyaronOutlanderNickPrefix][NameNyaronOutlanderNickMiddle][NameNyaronOutlanderNickSuffix]</li>
+		<li>NyaronNickNamerShort->[NameNyaronOutlanderNickMiddle][NameNyaronOutlanderNickSuffix]</li>
+		<li>NyaronNickNamerSolo->[NameNyaronOutlanderNickSolo]</li>
+		</rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  -->
+  
+  
+    <RulePackDef>
+    <defName>NamerNyaronMale</defName>
+     <include>
+      <li>NamerNyaronUtility</li>
+	  <li>NamerNyaronLastNamer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[NyaronLastNamer] [NameNyaronFemaleFirst]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerNyaronFemale</defName>
+     <include>
+      <li>NamerNyaronUtility</li>
+	  <li>NamerNyaronLastNamer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[NyaronLastNamer] [NameNyaronFemaleFirst]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <!--
+  
+  
+    <RulePackDef>
+    <defName>NamerNyaron_Outlander</defName>
+     <include>
+	  <li>NamerNyaronNickname</li>
+      <li>NamerNyaronUtility</li>
+	  <li>NamerNyaronLastNamer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[NyaronLastNamer] [NameNyaronFemaleFirst]</li>
+		<li>r_name->[NyaronLastNamer] '[NyaronNickNamerFull]' [NameNyaronFemaleFirst]</li>
+		<li>r_name->[NyaronLastNamer] '[NyaronNickNamerShort]' [NameNyaronFemaleFirst]</li>
+		<li>r_name->[NyaronLastNamer] '[NyaronNickNamerSolo]' [NameNyaronFemaleFirst]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  -->
+  
+</Defs>

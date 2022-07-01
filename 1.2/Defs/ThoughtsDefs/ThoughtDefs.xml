@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+    <defName>NyaronNeedOutdoors</defName>
+    <workerClass>ThoughtWorker_NeedOutdoors</workerClass>
+    <stages>
+      <li>
+        <label>Feeling Safe(extreme)</label>
+        <description>Outdoor is Dangerous!</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+      <li>
+        <label>Feeling Safe(serious)</label>
+        <description>Outdoor is Dangerous!</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li>
+        <label>Feeling Safe(major)</label>
+        <description>Outdoor is Dangerous!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>Feeling Safe(moderate)</label>
+        <description>Outdoor is Dangerous!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>Feeling Safe(minor)</label>
+        <description>Outdoor is Dangerous!</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+</Defs>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+  <ThingDef Abstract="True" Name="Nr_Ultramelee" ParentName="BaseWeapon">
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+	<relicChance>2</relicChance>
+    <comps>
+      <li Class="CompProperties_GeneratedName">
+        <nameMaker>NamerArtLightbringer</nameMaker>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>Nyaron_WeaponsMelee</li>
+    </thingCategories>
+	<weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <weaponTags>
+    </weaponTags>
+	<tradeTags>
+    </tradeTags>
+	<tradeability>Buyable</tradeability>
+    <thingSetMakerTags>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="Nr_Ultramelee">
+    <defName>Nr_Lightbringer</defName>
+    <label>Legendary weapon</label>
+    <description>A sword, which was made in far past, however it's edge is still solid and sharp. when wielding it, emitting powerful energy unknown origin.</description>
+	<statBases>
+    <MarketValue>0</MarketValue>
+    <Mass>0.8</Mass>
+	<MaxHitPoints>999999</MaxHitPoints>
+	<DeteriorationRate>0</DeteriorationRate>
+	<Flammability>0</Flammability>
+	<SellPriceFactor>0</SellPriceFactor>
+    <Beauty>5</Beauty>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Lightbringer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Lightbringer</li>
+        </capacities>
+        <power>50</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  	<ToolCapacityDef>
+		<defName>Lightbringer</defName>
+		<label>lightbringer</label>
+	</ToolCapacityDef>
+	<ManeuverDef>
+		<defName>nr_Lightbringer</defName>
+		<requiredCapacity>Lightbringer</requiredCapacity>
+		<verb>
+			<verbClass>Nyaron.Verb_Lightbringer</verbClass>
+			<meleeDamageDef>Cut</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+</Defs>

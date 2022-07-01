@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ArmorMachineableBase">
+    <defName>Nr_PowerArmor</defName>
+    <label>Nyaron PowerArmor</label>
+    <description>has a strong mobility, Avoid attacks with Agile movements.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/CatPowerArmor/CatPowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>55000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>1.12</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.64</ArmorRating_Heat>
+      <Insulation_Cold>46</Insulation_Cold>
+      <Insulation_Heat>22</Insulation_Heat>
+      <EquipDelay>12</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>NrApparel</li>
+    </thingCategories>
+    <costList>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Synthread>20</Synthread>
+    </costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparel/CatPowerArmor/CatPowerArmor</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+				<li>Nr_FixedArmor</li>
+			</layers>
+			<tags>
+        <li>Nyaron_Elite</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+</Defs>

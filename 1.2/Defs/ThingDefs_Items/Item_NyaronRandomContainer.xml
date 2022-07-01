@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="ResourceBase" Name="Base_NrItemContainer" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <tradeability>All</tradeability>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8.0</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+
+
+  <ThingDef ParentName="Base_NrItemContainer">
+    <defName>Nr_EPC</defName>
+    <label>Series-EP Container</label>
+    <description>It is a container about half the size of a ordinary human.The following words are inscribed on the surface as "standard Rimworld characters".\nyou'll never know what you're going to get!\nYou agreed that the open container cannot be refunded.</description>
+    <statBases>
+      <MarketValue>600</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Consumable/EP_Box</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+    <li>Nyaron_Stuffs</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Open Container</useLabel>
+		<useDuration>650</useDuration>
+      </li>
+      <li Class="Nyaron.CompProperties_UseEffectGenerateItem">
+			<itemContainedUnique>
+				<li>Nr_FlakCaster</li>
+			</itemContainedUnique>
+			 <itemContainedNormal>
+				<li>Nr_CriPistol</li>
+				<li>Nr_CriPistol</li>
+				<li>Nr_CriPistol</li>
+				<li>Nr_CriPistol</li>
+				<li>Nr_MfoldPdw</li>
+				<li>Nr_MfoldPdw</li>
+				<li>Nr_NpcRifle</li>
+				<li>Nr_NpcRifle</li>
+				<li>Nr_Stkbow</li>
+				<li>Nr_Stkbow</li>
+				<li>Nr_ChRifle</li>
+			</itemContainedNormal>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

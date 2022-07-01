@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>Nr_Stkbow</defName>
+    <label>Nyaron Stalkbow</label>
+    <description>A Mechanic Great bow with Aim assist funtion. Fires a high-velocity arrow silently.</description>
+    <graphicData>
+      <texPath>Things/WeaponRanged/StalkerBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<soundInteract>Bow_Large</soundInteract>
+	<statBases>
+      <MarketValue>800</MarketValue>
+      <Mass>2.8</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+	  <HuntingStealth>0.2</HuntingStealth>
+    </statBases>
+	<costList>
+      <Plasteel>60</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <weaponTags Inherit="False">
+      <li>Nyaron_weapon_striker</li>
+    </weaponTags>
+	<comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Nr_StkArrow</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>32.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Nr_StkArrow</defName>
+	<label>arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Arrow_Grow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+	  <stoppingPower>2</stoppingPower>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+    </ThingDef>
+</Defs>

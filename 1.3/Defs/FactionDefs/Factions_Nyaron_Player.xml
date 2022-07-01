@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+  <FactionDef Abstract="True" Name="NyaronFactionBase" Parent="FactionBase">
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="NyaronFactionBase">
+    <defName>NyaronPlayerColony</defName>
+    <label>Nyaron Settlement</label>
+    <description>Your own Nyaron Settlement.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NyaronPlayerColonist</basicMemberKind>
+	<pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+	<factionNameMaker>NR_NamerFaction</factionNameMaker>
+	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	<allowedCultures><!--1.3추가-->
+	  <li>NyaronCultures</li>
+    </allowedCultures>
+	<backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/IconNyaron</factionIconPath>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+	
+	<!--1.3에서 삭제됨-->
+	
+	<!--	<hairTags>
+			<li>Rural</li>
+		</hairTags> -->
+	
+	
+	
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	<playerInitialSettlementNameMaker>NR_NamerSettlement</playerInitialSettlementNameMaker>
+	<settlementNameMaker>NR_NamerSettlement</settlementNameMaker>
+	<colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+	    <raidLootValueFromPointsCurve><!-- 1.3에선 지정해주지 않으면 경고메세지가 뜸-->
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+	
+  </FactionDef>
+  
+</Defs>

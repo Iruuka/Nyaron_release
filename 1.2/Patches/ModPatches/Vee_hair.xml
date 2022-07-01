@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V1V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V1V/</texPath>
+						<defName>NR_V1V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+	
+		<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V3V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V3V/</texPath>
+						<defName>NR_V3V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+		</match>
+	</Operation>
+				
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V4V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V4V/</texPath>
+						<defName>NR_V4V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V6V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V6V/</texPath>
+						<defName>NR_V6V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V9V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V9V/</texPath>
+						<defName>NR_V9V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V10V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V10V/</texPath>
+						<defName>NR_V10V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V11V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V11V/</texPath>
+						<defName>NR_V11V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V12V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V12V/</texPath>
+						<defName>NR_V12V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V15V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V15V/</texPath>
+						<defName>NR_V15V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+				<value>
+					<HairDef>
+						<label>V16V</label>
+						<hairGender>Female</hairGender>
+						<texPath>Hair/V16V/</texPath>
+						<defName>NR_V16V</defName>
+						<hairTags>
+						<li>NRUnused</li>
+						</hairTags>
+					</HairDef>
+				</value>
+				
+		</match>	
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V1V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>	
+	</Operation>
+	
+	
+		<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V3V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>		
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V4V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>					
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V6V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V9V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>					
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V10V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>				
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V11V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>				
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V12V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>				
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V15V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>		
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Vee Hairs</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HairDef[defName="NR_V16V"]/hairTags</xpath>
+				<value>
+					<li>Nyaron</li>
+				</value>
+				
+		</match>
+	</Operation>
+</Patch>

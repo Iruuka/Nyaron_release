@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseNyaronPawnKind">
+    <race>Alien_Nyaron</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.40</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNyaronPawnKind">
+    <defName>NyaronPlayerColonist</defName>
+    <label>Nyaron Colonist</label>
+    <!--펙션def의 defname-->
+	<defaultFactionType>NyaronPlayerColony</defaultFactionType>
+    <backstoryCategories>
+			<li>Nyaron_Standard</li>
+			<li>Nyaron_Init</li>
+  	</backstoryCategories>
+    <apparelTags>
+	  <li>Nyaron_Starting</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>45</min>
+      <max>50</max>
+    </apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BaseNyaronPawnKind">
+    <defName>NyaronPlayerTribal</defName>
+    <label>Nyaron Tribe</label>
+    <defaultFactionType>NyaronPlayerColonyTribal</defaultFactionType>
+    <backstoryCategories>
+			<li>Tribal</li>
+  	</backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>100</min>
+      <max>200</max>
+    </apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+</Defs>

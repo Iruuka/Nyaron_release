@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+    <RulePackDef>
+    <defName>LightbringerUtility</defName>
+    <rulePack>
+	  <rulesStrings>
+		<li>Nr_Lightbringer_Name->[Nr_LBName]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>Nr_LBName->Words/Nouns/Nr_Artworks</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+    <RulePackDef>
+    <defName>NamerArtLightbringer</defName>
+	    <include>
+      <li>LightbringerUtility</li>
+    </include>
+	    <rulePack>
+      <rulesStrings>
+        <li>r_weapon_name->[Nr_LBName]</li>
+      </rulesStrings>
+	      </rulePack>
+  </RulePackDef>
+</Defs>

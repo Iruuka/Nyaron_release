@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs> 
+
+   <ThingDef ParentName="BodyPartBionicBase">
+      <defName>Nr_BioCatTail</defName>
+      <label>Bionic CatTail</label>
+      <description>It's an artificially made cat tail.</description>
+      <techLevel>Spacer</techLevel>
+    <costList> 
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+   </ThingDef>
+   
+  <RecipeDef Abstract="True" Name="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+  </RecipeDef>
+
+  <RecipeDef Name="SurgeryTails" ParentName="SurgeryFlesh" Abstract="True">
+  
+  </RecipeDef>
+<!-- Nyaron tail -->
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicTail</defName>
+    <label>Bionic cat Tail</label>
+    <labelNoun>a Bionic cat Tail.</labelNoun>
+    <description>Installed Bionic cat Tail.</description>
+    <descriptionHyperlinks><ThingDef>Nr_BioCatTail</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>Nr_BioCatTail</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    
+	<defName>InstallBionicCatTail</defName>
+    <label>install bionic cat tail</label>
+    <description>Install a bionic cat tail.</description>
+	<recipeUsers>
+    <li>Alien_Nyaron</li>
+    </recipeUsers>
+    <descriptionHyperlinks><ThingDef>Nr_BioCatTail</ThingDef></descriptionHyperlinks>
+    <jobString>Installing bionic cat tail.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Nr_BioCatTail</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Nr_BioCatTail</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>NR_CatTail</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicTail</addsHediff>
+  </RecipeDef>
+
+
+</Defs> 

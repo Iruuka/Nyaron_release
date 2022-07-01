@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+	<HairDef>
+		<defName>Nr_Bobcut</defName>
+		<label>Nr_Bobcut</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronBobcut</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Long</defName>
+		<label>Nr_Long</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronLong</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Short</defName>
+		<label>Nr_Short</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronShort</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Twin</defName>
+		<label>Nr_Twin</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronTwin</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Twintw</defName>
+		<label>Nr_Twin_twisted</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronTwintwisted</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_ShortTwin</defName>
+		<label>Nr_ShortTwin</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronShortTwin</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Pony</defName>
+		<label>Nr_Pony</label>
+		<styleGender>Female</styleGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronPony</texPath>
+		<category>Nyaron</category>
+		<styleTags>
+			<li>Nyaron</li>
+		</styleTags>
+	</HairDef>
+	
+	
+</Defs>

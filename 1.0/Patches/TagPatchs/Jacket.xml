@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+<Operation Class="PatchOperationAdd">
+	<xpath>*/ThingDef[defName="Apparel_Jacket"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparelLite</li>
+		<li>Nyaron_apparelMedium</li>
+	</value>
+</Operation>
+</Patch>

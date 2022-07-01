@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerNyaronUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>NameNyaronFemaleFirst->Names/Nyaron_First_Female</li>
+        <li>NameNyaronLastInit->Names/Nyaron_Last_Init</li>
+		<li>NameNyaronLastAlp->Names/Nyaron_Last_Alp</li>
+		<li>NameNyaronLastNum->Names/Nyaron_Last_Num</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerNyaronLastNamer</defName>
+	    <include>
+      <li>NamerNyaronUtility</li>
+    </include>
+    <rulePack>
+		<rulesStrings>
+		<li>NyaronLastNamer->[NameNyaronLastInit][NameNyaronLastAlp][NameNyaronLastNum][NameNyaronLastNum][NameNyaronLastNum]</li>
+		</rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+    <RulePackDef>
+    <defName>NamerNyaronMale</defName>
+     <include>
+      <li>NamerNyaronUtility</li>
+	  <li>NamerNyaronLastNamer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[NyaronLastNamer] [NameNyaronFemaleFirst]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerNyaronFemale</defName>
+     <include>
+      <li>NamerNyaronUtility</li>
+	  <li>NamerNyaronLastNamer</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[NyaronLastNamer] [NameNyaronFemaleFirst]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

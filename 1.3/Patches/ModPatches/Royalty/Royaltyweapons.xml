@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>		
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MeleeWeaponNyaronUltratech">
+    <defName>Nr_MiniSword</defName>
+    <label>minisword</label>
+    <description>A crystal-metallic longsword infused with mechanites that maintain a Super micro cutting edge.It cuts through even thick armor with faith, and its light weight permits fast attacks.</description>
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Monosword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.6</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.6</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="MeleeWeaponNyaronUltratech">
+    <defName>Nr_Xeushammer</defName>
+    <label>xeushammer</label>
+    <description>A Blowhammer with an embedded EMP capacitor. Upon impact, it blasts the target with an EMP burst in addition to the physical damage.</description>
+    <soundInteract>Interact_ZeusHammer</soundInteract>
+    <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/ZeusHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>3</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="MeleeWeaponNyaronUltratech">
+    <defName>Nr_PlasmSword</defName>
+    <label>plasmsword</label>
+    <description>A metal-cored sword with a cutting edge. Plasm is wrapped around the core, held in place by an weird field. Targets are both sliced by the core, as well as ruined by the plasm sheath.</description>
+    <soundInteract>Interact_PlasmaSword</soundInteract>
+    <meleeHitSound>MeleeHit_PlasmaSword</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/PlasmaSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

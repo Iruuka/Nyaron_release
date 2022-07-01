@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+<Operation Class="PatchOperationAdd">
+	
+<!-- 의류패치 -->	
+	<xpath>*/ThingDef[defName="Apparel_TribalA"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparelLite</li>
+	</value>
+
+</Operation>
+</Patch>

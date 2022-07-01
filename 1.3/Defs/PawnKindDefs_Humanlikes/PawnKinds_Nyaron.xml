@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================ Nyaron Base ========================== -->
+
+  <PawnKindDef Name="NyaronBase" Abstract="True">
+    <defaultFactionType>NyaronFaction</defaultFactionType>
+    <race>Alien_Nyaron</race>
+    <chemicalAddictionChance>0.005</chemicalAddictionChance>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+	<invNutrition>2.55</invNutrition>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+		<styleItemTags><!--기존의 HairTags 대체, 없어도 무관할듯-->
+			<li>
+			<tag>Nyaron</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+	 <weaponTags>
+    </weaponTags>
+	<!-- 1.3와서 새로생긴 자료(포로 저항심,의지) -->
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	<!-- =========================== -->
+  </PawnKindDef>
+  
+  <!-- ============================ Nyaron Civilian Base ========================== -->
+
+  <PawnKindDef Name="NyaronCivBase" ParentName="NyaronBase" Abstract="True">
+    <combatPower>80</combatPower>
+	<apparelAllowHeadgearChance>0.6</apparelAllowHeadgearChance>
+	<race>Alien_Nyaron</race>
+    <itemQuality>Poor</itemQuality>
+	<factionLeader>false</factionLeader>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Nyaron_apparel_vanguard</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_Pants</li>
+      <li>Apparel_BasicShirt</li>
+	  <li>Apparel_Jacket</li>
+    </apparelRequired>
+    <apparelMoney>
+      <min>250</min>
+      <max>1200</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>200</min>
+      <max>950</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>SimpleGun</li>
+	  <li>Nyaron_RangedMedium</li>
+	  <li>Nyaron_weapon_vanguard</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>200</min>
+      <max>400</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+    <techHediffsChance>0.20</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.75</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>95</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <choiceChance>5</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>100</min>
+            <max>500</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+  
+  <!-- ============================ Nyaron Civilians ========================== -->
+  
+  <PawnKindDef ParentName="NyaronCivBase">
+    <defName>Nyaron_Colonist</defName>
+    <label>Nyaron Colonist</label>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="NyaronCivBase">
+    <defName>Nyaron_Leader</defName>
+    <label>Nyaron Leader</label>
+    <labelPlural>leaders</labelPlural>	
+	<isFighter>true</isFighter>
+    <factionLeader>true</factionLeader>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard_Leader</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+	<minGenerationAge>21</minGenerationAge>
+	<maxGenerationAge>31</maxGenerationAge>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="NyaronCivBase">
+    <defName>Nyaron_Trader</defName>
+    <label>Nyaron Trader</label>
+	<combatPower>10</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+    <trader>true</trader>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="NyaronCivBase">
+    <defName>NyaronSlave</defName>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+    <label>Nyaron slave</label>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="NyaronCivBase">
+    <defName>NyaronRefugee</defName>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+    <label>Nyaron Refugee</label>
+  </PawnKindDef>
+
+ 
+  <!-- ============================ Nyaron Military Base ========================== -->
+  <PawnKindDef Name="NyaronMilBase" ParentName="NyaronBase" Abstract="True">
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+	<factionLeader>false</factionLeader>
+    <isFighter>true</isFighter>
+	<race>Alien_Nyaron</race>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Nyaron_Standard</li>
+        </categories>
+      </li>
+	</backstoryFiltersOverride>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+	<minGenerationAge>19</minGenerationAge>
+    <maxGenerationAge>50</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <apparelTags>
+    </apparelTags>
+    <apparelMoney>
+      <min>1500</min>
+      <max>5800</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>1400</min>
+      <max>20000</max>
+    </weaponMoney>
+    <weaponTags>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+   <!-- ============================ 냐론 뱅가드========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Soldier_Light</defName>
+    <label>Nyaron Vanguard</label>
+    <combatPower>100</combatPower>
+	<apparelAllowHeadgearChance>0.1</apparelAllowHeadgearChance>
+    <minGenerationAge>15</minGenerationAge>
+    <gearHealthRange>0.7~0.9</gearHealthRange>
+    <apparelTags>
+	  <li>Nyaron_apparel_vanguard</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_Pants</li>
+      <li>Apparel_BasicShirt</li>
+	  <li>Apparel_Jacket</li>
+    </apparelRequired>
+    <apparelMoney>
+      <min>500</min>
+      <max>2000</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>50</min>
+      <max>600</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>Nyaron_weapon_vanguard</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>2000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>1</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>10</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  <!-- ============================ 냐론 파이터========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Soldier</defName>
+    <label>Nyaron Fighter</label>
+    <combatPower>160</combatPower>
+	<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <minGenerationAge>13</minGenerationAge>
+    <gearHealthRange>0.9~1</gearHealthRange>
+    <apparelTags>
+	  <li>Nyaron_apparel_fighter</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Nr_CatJacket</li>
+    </apparelRequired>
+    <apparelMoney>
+      <min>2000</min>
+      <max>4000</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>700</min>
+      <max>1200</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>Nyaron_weapon_fighter</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>2000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>50</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+   <!-- ============================ 냐론 글라디에이터========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Soldier_Elite</defName>
+    <label>Nyaron Gladiator</label>
+    <combatPower>350</combatPower>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <minGenerationAge>17</minGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<itemQuality>Good</itemQuality>
+    <apparelTags>
+	  <li>Nyaron_apparel_gladiator</li>
+    </apparelTags>
+	
+    <apparelMoney>
+      <min>5000</min>
+      <max>25000</max>
+    </apparelMoney>
+	 <apparelRequired>
+      <li>Nr_PowerArmorHelmet</li>
+      <li>Nr_PowerArmor</li>
+    </apparelRequired>
+	<weaponMoney>1900~4000</weaponMoney>
+    <weaponTags>
+      <li>Nyaron_weapon_gladiator</li>
+	  <li>UltratechMelee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>200</min>
+            <max>500</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<biocodeWeaponChance>0.3</biocodeWeaponChance>
+  </PawnKindDef>
+  
+    <!-- ============================ 냐론 레인저========================== -->
+	
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Ranger_Light</defName>
+    <label>Nyaron Scout</label>
+    <combatPower>110</combatPower>
+	<apparelAllowHeadgearChance>0.1</apparelAllowHeadgearChance>
+    <minGenerationAge>15</minGenerationAge>
+    <gearHealthRange>0.8~1</gearHealthRange>
+    <apparelTags>
+      <li>Neolithic</li>
+	  <li>IndustrialBasic</li>
+	  <li>IndustrialMilitaryBasic</li>
+	  <li>Nyaron_apparel_scout</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_Pants</li>
+      <li>Apparel_BasicShirt</li>
+	  <li>Apparel_Jacket</li>
+    </apparelRequired>
+    <apparelMoney>
+      <min>500</min>
+      <max>2000</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>220</min>
+      <max>600</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>Nyaron_weapon_scout</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>2000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>1</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>10</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<biocodeWeaponChance>0.1</biocodeWeaponChance>
+  </PawnKindDef>
+  
+  <!-- ============================ 냐론 스트라이커========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Ranger</defName>
+    <label>Nyaron Striker</label>
+    <combatPower>200</combatPower>
+	<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <minGenerationAge>13</minGenerationAge>
+    <gearHealthRange>0.9~1</gearHealthRange>
+    <apparelTags>
+	  <li>IndustrialBasic</li>
+	  <li>IndustrialAdvanced</li>
+	  <li>Nyaron_apparel_striker</li>
+	  <li>IndustrialAdvanced</li>
+	  <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+	<apparelRequired>
+    </apparelRequired>
+    <apparelMoney>
+      <min>2000</min>
+      <max>4000</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>700</min>
+      <max>1200</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>Nyaron_weapon_striker</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>2000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>50</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<biocodeWeaponChance>0.2</biocodeWeaponChance>
+  </PawnKindDef>
+  
+   <!-- ============================ 냐론 로켓티어========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Ranger_Rocketeer</defName>
+    <label>Nyaron Rocketeer</label>
+    <combatPower>280</combatPower>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <minGenerationAge>17</minGenerationAge>
+    <gearHealthRange>0.8~1</gearHealthRange>
+    <apparelTags>
+	  <li>Nyaron_apparel_rocketeer</li>
+    </apparelTags>
+	
+    <apparelMoney>
+      <min>5000</min>
+      <max>25000</max>
+    </apparelMoney>
+	<weaponMoney>2500~5000</weaponMoney>
+    <weaponTags>
+      <li>Nyaron_weapon_rocketeer</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>50</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<biocodeWeaponChance>0.5</biocodeWeaponChance>
+  </PawnKindDef>
+  <!-- ============================ 냐론 가디언========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Ranger_Elite</defName>
+    <label>Nyaron Guardian</label>
+    <combatPower>300</combatPower>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <minGenerationAge>17</minGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<itemQuality>Excellent</itemQuality>
+    <apparelTags>
+	  <li>Nyaron_apparel_guardian</li>
+    </apparelTags>
+	
+    <apparelMoney>
+      <min>5000</min>
+      <max>25000</max>
+    </apparelMoney>
+	 <apparelRequired>
+      <li>Nr_PowerArmorHelmet</li>
+      <li>Nr_PowerArmor</li>
+    </apparelRequired>
+	<weaponMoney>2500~5000</weaponMoney>
+    <weaponTags>
+      <li>Nyaron_weapon_guardian</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>200</min>
+            <max>500</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<biocodeWeaponChance>0.5</biocodeWeaponChance>
+  </PawnKindDef>
+  
+  <!-- ============================ 냐론 어쌔신========================== -->
+  <PawnKindDef ParentName="NyaronMilBase">
+    <defName>Nyaron_Special_Assassin</defName>
+    <label>Nyaron Assassin</label>
+    <combatPower>150</combatPower>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <minGenerationAge>17</minGenerationAge>
+    <gearHealthRange>1~1</gearHealthRange>
+	<itemQuality>Excellent</itemQuality>
+    <apparelTags>
+	  <li>Nyaron_apparel_assassin</li>
+    </apparelTags>
+	
+    <apparelMoney>
+      <min>5000</min>
+      <max>25000</max>
+    </apparelMoney>
+	<weaponMoney>2500~5000</weaponMoney>
+    <weaponTags>
+      <li>Nyaron_weapon_assassin</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.73</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>200</min>
+            <max>500</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

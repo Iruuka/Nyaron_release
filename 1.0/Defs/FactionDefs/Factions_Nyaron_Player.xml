@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="NyaronFactionBase">
+    <colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="NyaronFactionBase">
+    <defName>NyaronPlayerColony</defName>
+    <label>냐론 정착지</label>
+    <description>플레이어의 냐론 정착지입니다.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NyaronPlayerColonist</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <settlementNameMaker>NR_NamerSettlementOutlander</settlementNameMaker>
+	<playerInitialSettlementNameMaker>NR_NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NR_NamerFactionOutlander</factionNameMaker>
+    <techLevel>Neolithic</techLevel>
+<!--탈출직후 배경만 나오게-->
+    <backstoryCategories>
+			<li>Nyaron_Standard</li>
+  	</backstoryCategories>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/IconNyaron</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+		<li>Nyaron</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	<colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="NyaronFactionBase">
+    <defName>NyaronPlayerColonyTribal</defName>
+    <label>Nyaron Tribal-like</label>
+    <description>Nyaron semi-tribal start. (No research done, but high tech level)</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NyaronPlayerTribal</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NR_NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NR_NamerFactionOutlander</factionNameMaker>
+	<techLevel>Neolithic</techLevel>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <backstoryCategories>
+		<li>Tribal</li>
+  	</backstoryCategories>
+    <homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/IconNyaron</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Civil</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

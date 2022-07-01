@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+<!--Apparels-->
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Apparel_SimpleHelmet"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparel_fighter</li>
+	</value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Apparel_AdvancedHelmet"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparel_fighter</li>
+	</value>
+</Operation>
+
+<!--Weapons-->
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_Spear"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_fighter</li>
+	</value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_fighter</li>
+	</value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_fighter</li>
+	</value>
+</Operation>
+
+</Patch>

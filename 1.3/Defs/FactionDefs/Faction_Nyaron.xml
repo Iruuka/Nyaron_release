@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 
+	1.2와의 비교점
+	
+	- <startingGoodwill>항목이 삭제됨.
+	- 이데올로기dlc 관련하여 allowedCultures,requiredMemes,disallowedMemes,structureMemeWeights 항목이 추가됨.
+	- maxConfigurableAtWorldCreation 옵션이 생김(없으면 팩션 갯수를 조절하는 메뉴에서 나타나지 않음.)
+	
+	-->
+  <FactionDef ParentName="FactionBase" >
+	<defName>NyaronFaction</defName>
+	<label>Nyaron Domestic tribe</label>
+    <description>neutral Nyaron tribe.</description>
+	<colorSpectrum>
+      <li>(1.0, 0.866, 0.949)</li>
+	  <li>(0.8, 0.417, 0.674)</li>
+    </colorSpectrum>
+	<pawnSingular>nyaron</pawnSingular>
+    <pawnsPlural>nyarons</pawnsPlural>
+	<categoryTag>Outlander</categoryTag>
+	<listOrderPriority>30</listOrderPriority>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Nyaron Leader</leaderTitle>
+	<factionNameMaker>NR_NamerFaction</factionNameMaker>
+	<settlementNameMaker>NR_NamerSettlement</settlementNameMaker>
+	<allowedCultures><li>NyaronCultures</li></allowedCultures> <!--허용하는 문화(CultureDef)지정 1.3추가-->
+	<requiredMemes> <!--필수로 들어가는 meme지정 1.3 이데올로기 추가-->
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+    </requiredMemes>
+	<disallowedMemes> <!--포함시키지 않는 meme지정 1.3 이데올로기 추가-->
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+	<structureMemeWeights>    <!--기반이념(종교같은 큰틀)의 비율 1.3 이데올로기 추가-->
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Animist>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
+	<techLevel>Ultra</techLevel>
+ <backstoryFilters>
+      <li>
+        <categories>
+			<li>Outlander</li>
+        </categories>
+      </li>
+ </backstoryFilters>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+   <caravanTraderKinds>
+      <li>Caravan_Nyaron_BulkGoods</li>
+      <li>Caravan_Nyaron_CombatSupplier</li>
+      <li>Caravan_Nyaron_Exotic</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-20~50</allowedArrivalTemperatureRange>
+	    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+	<raidLootMaker>NyaronRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Nyaron_Colonist>10</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>4</commonality>
+        <options>
+          <Nyaron_Colonist>8</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Soldier_Elite>1</Nyaron_Soldier_Elite>
+        </options>
+      </li>
+	  	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>2</commonality>
+        <options>
+          <Nyaron_Colonist>8</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+		  <Nyaron_Ranger_Elite>1</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>1</commonality>
+        <options>
+          <Nyaron_Soldier>80</Nyaron_Soldier>
+		  <Nyaron_Ranger>100</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Ranger_Rocketeer>2</Nyaron_Ranger_Rocketeer>
+		  <Nyaron_Soldier_Elite>4</Nyaron_Soldier_Elite>
+		  <Nyaron_Ranger_Elite>8</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>1</commonality>
+        <options>
+		  <Nyaron_Soldier_Elite>10</Nyaron_Soldier_Elite>
+		  <Nyaron_Ranger_Elite>20</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	   <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>0</commonality>
+        <options>
+          <Nyaron_Leader>1</Nyaron_Leader>
+        </options>
+      </li>
+           <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Nyaron_Colonist>10</Nyaron_Colonist>
+		  <Nyaron_Soldier>2</Nyaron_Soldier>
+        </options>
+      </li>
+	  <li>
+      <kindDef>Trader</kindDef>
+	  <commonality>1</commonality>
+        <traders>
+          <Nyaron_Trader>1</Nyaron_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>5</Muffalo>
+          <Dromedary>5</Dromedary>
+		  <Alpaca>5</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+        </guards>
+      </li>
+	  <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Nyaron_Colonist>100</Nyaron_Colonist>
+          <Nyaron_Leader>1</Nyaron_Leader>
+          <Nyaron_Soldier>30</Nyaron_Soldier>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/IconNyaron</factionIconPath>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation> <!--초기설정에서 최대로 넣을 수 있는 팩션의 갯수 1.3추가-->
+    <configurationListOrderPriority>31</configurationListOrderPriority> <!--초기설정에서 팩션갯수를 정하는 메뉴에서의 정렬순서?인듯	1.3추가-->
+  </FactionDef>
+  
+   <FactionDef ParentName="FactionBase" >
+	<defName>NyaronFactionEnemy</defName>
+	<label>Nyaron Feral tribe</label>
+    <description>Nyaron tribe hostile to other factions.</description>
+	<colorSpectrum>
+      <li>(1.0, 0.542, 0.542)</li>
+	  <li>(1.0, 0.157, 0.161)</li>
+    </colorSpectrum>
+	<pawnSingular>nyaron</pawnSingular>
+    <pawnsPlural>nyarons</pawnsPlural>
+	<categoryTag>Outlander</categoryTag>
+	<listOrderPriority>30</listOrderPriority>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Nyaron Leader</leaderTitle>
+	<factionNameMaker>NR_NamerFaction</factionNameMaker>
+	<settlementNameMaker>NR_NamerSettlement</settlementNameMaker>
+	<allowedCultures><li>NyaronCultures</li></allowedCultures> <!--허용하는 문화(CultureDef)지정 1.3추가-->
+	<requiredMemes> <!--필수로 들어가는 meme지정 1.3 이데올로기 추가-->
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+    </requiredMemes>
+	<disallowedMemes> <!--포함시키지 않는 meme지정 1.3 이데올로기 추가-->
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+	<structureMemeWeights>    <!--기반이념(종교같은 큰틀)의 비율 1.3 이데올로기 추가-->
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Animist>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
+	<techLevel>Ultra</techLevel>
+ <backstoryFilters>
+      <li>
+        <categories>
+			<li>Outlander</li>
+        </categories>
+      </li>
+ </backstoryFilters>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+   <caravanTraderKinds>
+      <li>Caravan_Nyaron_BulkGoods</li>
+      <li>Caravan_Nyaron_CombatSupplier</li>
+      <li>Caravan_Nyaron_Exotic</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-20~50</allowedArrivalTemperatureRange>
+	    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+	<raidLootMaker>NyaronRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Nyaron_Colonist>10</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>4</commonality>
+        <options>
+          <Nyaron_Colonist>8</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Soldier_Elite>1</Nyaron_Soldier_Elite>
+        </options>
+      </li>
+	  	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>2</commonality>
+        <options>
+          <Nyaron_Colonist>8</Nyaron_Colonist>
+          <Nyaron_Soldier>100</Nyaron_Soldier>
+		  <Nyaron_Ranger>80</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+		  <Nyaron_Ranger_Elite>1</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>1</commonality>
+        <options>
+          <Nyaron_Soldier>80</Nyaron_Soldier>
+		  <Nyaron_Ranger>100</Nyaron_Ranger>
+		  <Nyaron_Soldier_Light>40</Nyaron_Soldier_Light>
+		  <Nyaron_Ranger_Light>40</Nyaron_Ranger_Light>
+		  <Nyaron_Ranger_Rocketeer>2</Nyaron_Ranger_Rocketeer>
+		  <Nyaron_Soldier_Elite>4</Nyaron_Soldier_Elite>
+		  <Nyaron_Ranger_Elite>8</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>1</commonality>
+        <options>
+		  <Nyaron_Soldier_Elite>10</Nyaron_Soldier_Elite>
+		  <Nyaron_Ranger_Elite>20</Nyaron_Ranger_Elite>
+        </options>
+      </li>
+	   <li>
+        <kindDef>Combat</kindDef>		
+        <commonality>0</commonality>
+        <options>
+          <Nyaron_Leader>1</Nyaron_Leader>
+        </options>
+      </li>
+           <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Nyaron_Colonist>10</Nyaron_Colonist>
+		  <Nyaron_Soldier>2</Nyaron_Soldier>
+        </options>
+      </li>
+	  <li>
+      <kindDef>Trader</kindDef>
+	  <commonality>1</commonality>
+        <traders>
+          <Nyaron_Trader>1</Nyaron_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>5</Muffalo>
+          <Dromedary>5</Dromedary>
+		  <Alpaca>5</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+        </guards>
+      </li>
+	  <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Nyaron_Colonist>100</Nyaron_Colonist>
+          <Nyaron_Leader>1</Nyaron_Leader>
+          <Nyaron_Soldier>30</Nyaron_Soldier>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/IconNyaron</factionIconPath>
+	<naturalEnemy>true</naturalEnemy>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation> <!--초기설정에서 최대로 넣을 수 있는 팩션의 갯수 1.3추가-->
+    <configurationListOrderPriority>32</configurationListOrderPriority> <!--초기설정에서 팩션갯수를 정하는 메뉴에서의 정렬순서?인듯	1.3추가-->
+  </FactionDef>
+  
+    <ThingSetMakerDef>
+    <defName>NyaronRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+			<li>Gold</li>
+			<li>Nr_EPC</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Nr_CatMaidBand</defName>
+    <label>Nyaron Maid Hairband</label>
+    <description>Frill Hairband.</description>
+    <graphicData>
+      <texPath>Things/Apparel/CatMaidBand/CatMaidBand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>30</Cloth>
+    </costList>
+    <thingCategories>
+      <li>NrApparel</li>
+    </thingCategories>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+	  <WorkToMake>3000</WorkToMake>
+      <Mass>0.2</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <Insulation_Cold>6</Insulation_Cold>
+      <Insulation_Heat>5</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/CatMaidBand/CatMaidBand</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>Nyaron_IndustrialCustom</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+	  <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+	</ThingDef>
+	
+</Defs>

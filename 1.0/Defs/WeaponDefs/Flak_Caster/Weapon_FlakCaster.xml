@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+ 
+  <ThingDef ParentName="BaseGun">
+    <defName>Nr_FlakCaster</defName>
+    <label>마카이로두스 플랙캐스터</label>
+    <description>대규모 진압을 위해 제작된 유탄살포기입니다.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/WeaponRanged/FlakCaster</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.5</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>7</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>NyaronExGun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>SingleUseWeapon</li>
+    </thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>NR_Flak</defaultProjectile>
+        <forcedMissRadius>2</forcedMissRadius>
+        <warmupTime>2.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <range>35.9</range>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <burstShotCount>8</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>1</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0.7</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>NR_Flak</defName>
+    <label>NRFlak</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Flak_cannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Nr_Flak</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>0.7</explosionRadius>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

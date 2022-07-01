@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseNyaronPawnKind">
+    <race>Alien_Nyaron</race>
+    <combatPower>40</combatPower>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseNyaronPawnKind">
+    <defName>NyaronPlayerColonist</defName>
+    <label>Nyaron Colonist</label>
+    <!--펙션def의 defname-->
+	<defaultFactionType>NyaronPlayerColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+		<li>Nyaron_Init</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+    <apparelTags>
+	  <li>Nyaron_Starting</li>
+    </apparelTags>
+	<styleItemTags><!--기존의 HairTags 대체, 없어도 무관할듯-->
+		<li>
+			<tag>Nyaron</tag>
+			<baseWeight>1</baseWeight>
+			<weightFactor>1</weightFactor>
+		</li>
+	</styleItemTags>
+    <apparelMoney>
+      <min>45</min>
+      <max>50</max>
+    </apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	<!-- 1.3와서 새로생긴 자료(포로 저항심,의지) -->
+    <initialWillRange>0~0</initialWillRange>
+    <initialResistanceRange>13~21</initialResistanceRange>
+	<!-- =========================== -->
+  </PawnKindDef>
+
+</Defs>

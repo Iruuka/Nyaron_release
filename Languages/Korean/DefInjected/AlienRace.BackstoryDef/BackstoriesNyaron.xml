@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+   <Nyaron_Child_Incubator.title>냐론 배양기 아기</Nyaron_Child_Incubator.title> 
+   <Nyaron_Child_Incubator.titleShort>냐론 배양기 아기</Nyaron_Child_Incubator.titleShort> 
+   <Nyaron_Child_Incubator.baseDescription>태아로 수정된 냐론은 배양기에서 12살까지 성장합니다. 이 과정은 약 1주일에 걸쳐 진행되며, 메카나이트를 통한 기억생성도 함께 이루어집니다.</Nyaron_Child_Incubator.baseDescription> 
+   <Nyaron_Adult_Leader1.title>냐론 우두머리</Nyaron_Adult_Leader1.title> 
+   <Nyaron_Adult_Leader1.titleShort>냐론 우두머리</Nyaron_Adult_Leader1.titleShort> 
+   <Nyaron_Adult_Leader1.baseDescription>[PAWN_nameDef] 은(는) 행성에서 방황했던 냐론들의 우두머리입니다.냐론 사회에 법과 규칙은 존재하지 않으며 오직 힘의 차이가 무리를 따르게 합니다</Nyaron_Adult_Leader1.baseDescription> 
+   <Nyaron_Adult_Soldier.title>냐론 병사</Nyaron_Adult_Soldier.title> 
+   <Nyaron_Adult_Soldier.titleShort>냐론 병사</Nyaron_Adult_Soldier.titleShort> 
+   <Nyaron_Adult_Soldier.baseDescription>[PAWN_nameDef] 의 기억 속엔 각종 무기사용법과 전략, 냥냥권을 수련했던 기억 등이 들어 있었습니다. 처음 만지는 무기들도, 전장에서 싸우는 것도 그녀에겐 너무나 익숙하게 느껴집니다.</Nyaron_Adult_Soldier.baseDescription> 
+   <Nyaron_Adult_Dancer.title>냐론 댄서</Nyaron_Adult_Dancer.title> 
+   <Nyaron_Adult_Dancer.titleShort>냐론 댄서</Nyaron_Adult_Dancer.titleShort> 
+   <Nyaron_Adult_Dancer.baseDescription>[PAWN_nameDef] 은(는) 댄스 머신입니다. 지루한 음극선관 TV를 보는 것보다 훨씬 좋아.</Nyaron_Adult_Dancer.baseDescription> 
+   <Nyaron_Adult_Singer.title>냐론 아이돌 연습생</Nyaron_Adult_Singer.title> 
+   <Nyaron_Adult_Singer.titleShort>냐론 아이돌 연습생</Nyaron_Adult_Singer.titleShort> 
+   <Nyaron_Adult_Singer.baseDescription>[PAWN_nameDef] 은(는) 우주의 한 대형 기획사에서 야심차게 준비한 TV프로에 출연하기 위해 배송되고 있었습니다. 불행한 사고로 인해 계획은 무산되었지만 그녀는 단지 기획사가 연출한 내용이라 생각하고 있습니다.</Nyaron_Adult_Singer.baseDescription> 
+   <Nyaron_Adult_Hunter.title>냐론 쥐 사냥꾼</Nyaron_Adult_Hunter.title> 
+   <Nyaron_Adult_Hunter.titleShort>냐론 쥐 사냥꾼</Nyaron_Adult_Hunter.titleShort> 
+   <Nyaron_Adult_Hunter.baseDescription>[PAWN_nameDef] 은(는) 총을 다루는 솜씨가 뛰어나 사냥할 때 빈손으로 돌아온 적이 없었습니다. 그러나 밤 늦게 돌아올 때마다 그녀는 먹이, 특히 불쌍한 쥐들을 가지고 노는 것을 광적으로 즐겼습니다.</Nyaron_Adult_Hunter.baseDescription> 
+   <Nyaron_Adult_Police.title>냐론 경찰</Nyaron_Adult_Police.title> 
+   <Nyaron_Adult_Police.titleShort>냐론 경찰</Nyaron_Adult_Police.titleShort> 
+   <Nyaron_Adult_Police.baseDescription>[PAWN_nameDef] 을(를) 경찰서에서 주문한 것은 대도시에서 "치안"을 담당할 인원이 부족했기 때문입니다. 대부분의 경찰은 부양할 가족이 있었기 때문에 "사건"은 항상 구닥다리 경비 로봇과 고양이 경찰 소녀들의 몫이었습니다.</Nyaron_Adult_Police.baseDescription> 
+   <Nyaron_Adult_Exproler.title>냐론 탐사대원</Nyaron_Adult_Exproler.title> 
+   <Nyaron_Adult_Exproler.titleShort>냐론 탐사대원</Nyaron_Adult_Exproler.titleShort> 
+   <Nyaron_Adult_Exproler.baseDescription>[PAWN_nameDef] 은(는) 이 세계에서 가장 위험한 곳을 조사하는 탐험대에 합류할 예정이었습니다.</Nyaron_Adult_Exproler.baseDescription> 
+   <Nyaron_Adult_CustomMaid.title>냐론 커스텀 오더 메이드</Nyaron_Adult_CustomMaid.title> 
+   <Nyaron_Adult_CustomMaid.titleShort>냐론 메이드</Nyaron_Adult_CustomMaid.titleShort> 
+   <Nyaron_Adult_CustomMaid.baseDescription>[PAWN_nameDef] 은(는) 우주 최고의 사교적인 클럽인 "The Empire" 에서 오너와 장미빛 나날을 보낼 예정이었습니다. 비록 그를 만나진 못했지만 이 세계에서 자신의 새로운 오너를 찾을 것 입니다.</Nyaron_Adult_CustomMaid.baseDescription> 
+   <Nyaron_Adult_Petgirl.title>애완소녀</Nyaron_Adult_Petgirl.title> 
+   <Nyaron_Adult_Petgirl.titleShort>애완소녀</Nyaron_Adult_Petgirl.titleShort> 
+   <Nyaron_Adult_Petgirl.baseDescription>길러라 집사.</Nyaron_Adult_Petgirl.baseDescription> 
+   <Nyaron_Adult_Nekopara.title>냐론 제과점 간판소녀</Nyaron_Adult_Nekopara.title> 
+   <Nyaron_Adult_Nekopara.titleShort>냐론 제과점 간판소녀</Nyaron_Adult_Nekopara.titleShort> 
+   <Nyaron_Adult_Nekopara.baseDescription>우주 어딘가에 있는 제과점에서는 고양이들을 종업원으로 쓴다고 합니다. [PAWN_nameDef] 은(는) 그 가게의 가맹점 중 하나로 배송될 예정이었습니다.</Nyaron_Adult_Nekopara.baseDescription> 
+   <Nyaron_Adult_Abandoned_Cat.title>냐론 버려진 고양이</Nyaron_Adult_Abandoned_Cat.title> 
+   <Nyaron_Adult_Abandoned_Cat.titleShort>냐론 버려진 고양이</Nyaron_Adult_Abandoned_Cat.titleShort> 
+   <Nyaron_Adult_Abandoned_Cat.baseDescription>주인의 폭력을 견디지 못한 [PAWN_nameDef] 은(는) 스스로를 '유기'하기 위해 정기화물선에 숨어 있었습니다.</Nyaron_Adult_Abandoned_Cat.baseDescription>
+	<Nyaron_Adult_Mobile_Crew.title>냐론 기동타격대원</Nyaron_Adult_Mobile_Crew.title> 
+   <Nyaron_Adult_Mobile_Crew.titleShort>냐론 기동타격대원</Nyaron_Adult_Mobile_Crew.titleShort> 
+   <Nyaron_Adult_Mobile_Crew.baseDescription>지옥같은 환경에서, 강도높은 훈련을 통해 동료와의 유대감과 절대적인 충성, 극한상황에서 전투력을 유지할 수 있는 능력을 키운 이 최정예 병사들은 전황을 뒤집기 위한 와일드카드로 종종 이용되어 왔습니다.</Nyaron_Adult_Mobile_Crew.baseDescription>   
+   <Nyaron_Adult_Nurse.title>냐론 간호사</Nyaron_Adult_Nurse.title> 
+   <Nyaron_Adult_Nurse.titleShort>냐론 간호사</Nyaron_Adult_Nurse.titleShort> 
+   <Nyaron_Adult_Nurse.baseDescription>[PAWN_nameDef] 은(는) 의사의 보조보다는 환자의 안정을 위해 병원에 채용되었습니다. 덕분에 병원의 평판이 수직상승하여 4달연속 이달의 간호사로 선정되었지만,늘어난 털 알레르기 환자 보호자들의 항의 때문에 결국은 해고당했습니다.</Nyaron_Adult_Nurse.baseDescription>
+   <Nyaron_Adult_Builder.title>냐론 건축노동자</Nyaron_Adult_Builder.title> 
+   <Nyaron_Adult_Builder.titleShort>냐론 건축노동자</Nyaron_Adult_Builder.titleShort> 
+   <Nyaron_Adult_Builder.baseDescription>[PAWN_nameDef] 은(는) 위험천만한 공사현장에 투입되었습니다. 그러나 그녀가 간단히 대처해버리는 추락과 지붕붕괴에 대한 안전불감증을 유발해 오히려 인적 피해가 막대해진 탓에 퇴출되고 말았습니다.</Nyaron_Adult_Builder.baseDescription>
+   <Nyaron_Adult_Sellsword.title>냐론 용병</Nyaron_Adult_Sellsword.title> 
+   <Nyaron_Adult_Sellsword.titleShort>냐론 용병</Nyaron_Adult_Sellsword.titleShort> 
+   <Nyaron_Adult_Sellsword.baseDescription>[PAWN_nameDef] 은(는) 금은보화를 사랑합니다. 사고로 인해 알 수 없는 행성에 낙오되었어도 목적은 변하지 않았습니다.</Nyaron_Adult_Sellsword.baseDescription>
+   
+   <Nyaron_Adult_Narco.title>정구지</Nyaron_Adult_Narco.title> 
+   <Nyaron_Adult_Narco.titleShort>정구지</Nyaron_Adult_Narco.titleShort> 
+   <Nyaron_Adult_Narco.baseDescription>왜 정구지라는 이름을 붙었지? 이녀석의 머리가 초록색이라서 그런가.</Nyaron_Adult_Narco.baseDescription>
+
+</LanguageData>

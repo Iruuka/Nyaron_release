@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Nr_CatJacket</defName>
+    <label>전투 재킷</label>
+    <description>오픈 재킷과 반바지가 한 세트인 의상입니다. 겉보기와 달리 무척 튼튼합니다.</description>
+    <graphicData>
+      <texPath>Things/Apparel/CatJacket/CatJacket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>225</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>NrApparel</li>
+    </thingCategories>
+    <statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>30000</WorkToMake>
+      <Mass>4.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+		<li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/CatJacket/CatJacket</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+		<li>Middle</li>
+		<li>Shell</li>
+      </layers>
+      <tags>
+        <li>Nyaron_IndustrialCustom</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+</Defs>

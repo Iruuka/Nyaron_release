@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="NyaronFactionBase">
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="NyaronFactionBase">
+    <defName>NyaronPlayerColony</defName>
+    <label>Nyaron Settlement</label>
+    <description>Your own Nyaron Settlement.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NyaronPlayerColonist</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+<!--탈출직후 배경만 나오게-->
+	<backstoryFilters>
+      <li>
+        <categories>
+          <li>Nyaron_Init</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/IconNyaron</factionIconPath>
+	<playerInitialSettlementNameMaker>NR_NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NR_NamerFactionOutlander</factionNameMaker>
+	<settlementNameMaker>NR_NamerSettlementOutlander</settlementNameMaker>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+		
+		<hairTags>
+			<li>Rural</li>
+		</hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	<colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="NyaronFactionBase">
+    <defName>NyaronPlayerColonyTribal</defName>
+    <label>Nyaron Tribal-like</label>
+    <description>Nyaron semi-tribal start. (No research done, but high tech level)</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>NyaronPlayerTribal</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NR_NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NR_NamerFactionOutlander</factionNameMaker>
+	<techLevel>Neolithic</techLevel>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/IconNyaron</factionIconPath>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+		<hairTags>
+			<li>Tribal</li>
+		</hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(0.4, 0.687, 0.947)</li>
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

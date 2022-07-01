@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentCategoryDef>
+    <defName>Nr_Threat</defName>
+  </IncidentCategoryDef>
+  <IncidentCategoryDef>
+    <defName>Nr_Misc</defName>
+  </IncidentCategoryDef>
+<!-- not available yet.
+  <IncidentDef>
+    <defName>NyaronBandArrival</defName>
+    <label>nyaron band arrival</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Nyaron.IncidentWorker_NyaronBandGroup</workerClass>
+    <category>FactionArrival</category>
+    <baseChance>4</baseChance>
+    <requireColonistsPresent>True</requireColonistsPresent>
+  </IncidentDef>
+-->
+  <IncidentDef>
+    <defName>Infestation_CS</defName>
+    <label>infestation cs</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Nyaron.IncidentWorker_Infestation_CS</workerClass>
+    <letterLabel>Infestation</letterLabel>
+    <letterText>Empty text.</letterText>
+    <baseChance>10</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <category>Nr_Threat</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>220</minThreatPoints>
+    <tale>Infestation</tale>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>CropBlight_CS</defName>
+    <label>crop blight cs</label>
+    <category>Nr_Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_CropBlight</workerClass>
+    <baseChance>5</baseChance>
+    <minRefireDays>60</minRefireDays>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+</Defs>

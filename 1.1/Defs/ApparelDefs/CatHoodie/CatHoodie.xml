@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ApparelMakeableBase">
+    <defName>Nr_CatHoodie</defName>
+    <label>CatHoodie</label>
+    <description>Cute CatHoodie.</description>
+    <graphicData>
+      <texPath>Things/Apparel/CatHoodie/CatHoodie</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>NrApparel</li>
+    </thingCategories>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+	  <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
+	  <Insulation_Cold>5</Insulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.80</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/CatHoodie/CatHoodie</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Nyaron_IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+</Defs>

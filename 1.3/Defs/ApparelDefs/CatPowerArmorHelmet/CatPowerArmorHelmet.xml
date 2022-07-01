@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <ThingDef ParentName="ArmorHelmetMakeableBase">
+    <defName>Nr_PowerArmorHelmet</defName>
+    <label>Nyaron PowerArmor Helmet</label>
+    <description>A helmet paired with Nyaron PowerArmor. Improves wearers sights and durability.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/CatPowerArmorHelmet/CatPowerArmorHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <Insulation_Cold>6</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MeleeDodgeChance>1</MeleeDodgeChance>
+	  <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+	  <PainShockThreshold>0.07</PainShockThreshold>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+		<li>Nr_Ears</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/CatPowerArmorHelmet/CatPowerArmorHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+	   <tags>
+        <li>Nyaron_Elite</li>
+		<li MayRequire="kentington.saveourship2">EVA</li>
+      </tags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+	  <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+</Defs>

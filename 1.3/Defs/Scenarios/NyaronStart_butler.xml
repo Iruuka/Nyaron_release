@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ScenarioDef>
+	<defName>NyaronStart_butler</defName>
+	<label>A butler job(easy)</label>	
+		<description>A huge part-time job with an hourly wage of 100 silver! The story of an idiot who went crazy when he saw the flyer meets a cat in a rimworld.</description>
+		<scenario>
+		<summary>You have been chosen as a butler.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>1</pawnCount>
+			</li>
+			<li Class="Nyaron.ScenPart_NyaronArrived">
+				<def>Nyaron_arrived</def>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>30</count>
+			</li>
+
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>StartingThing_Defined</def>
+				<thingDef>Nr_EPC</thingDef>
+				<count>1</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Gun_BoltActionRifle</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineIndustrial</thingDef>
+				<count>10</count>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>nice to meet you. Are you a new butler? The cat will probably be in front of you when you open your eyes. what about money? When the job is done safely, we'll count it. I want you to work quickly now! hehe...\n(It didn't take long for you to realize that you were deceived.)</text>
+				<textKey>GameStartDialog</textKey>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+</Defs>

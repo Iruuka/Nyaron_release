@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Nr_ChRifle</defName>
+    <label>Chatoyan sniper Rifle</label>
+    <description>Long-ranged beam sniper rifle.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/WeaponRanged/ChatoyanRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>36000</WorkToMake>
+      <Mass>5.5</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.80</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>60</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+	<thingCategories Inherit="False">
+		<li>Nyaron_WeaponsRanged</li>
+	</thingCategories>
+    <weaponTags Inherit="False">
+      <li>Nyaron_weapon_guardian</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>NR_SniperBullet</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>41.9</range>
+        <soundCast>Nr_beamfire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+	  
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef Class="Nyaron.ThingDef_NyaronBeam" ParentName="BaseBullet">
+    <defName>NR_SniperBullet</defName>
+    <label>Beam Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Nr_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="Nyaron.NyaronBeamProjectileProps">
+	  <moteConnecting>Mote_NyaronBeam</moteConnecting>
+      <damageDef>EnergyBullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+	  <stoppingPower>4</stoppingPower>
+	  <extraDamages>
+          <li>
+            <def>EMP</def>
+            <amount>15</amount>
+          </li>
+        </extraDamages>
+      <speed>10000</speed>
+    </projectile>
+	<thingClass>Nyaron.Projectile_NyaronBeam</thingClass>
+  </ThingDef>
+</Defs>

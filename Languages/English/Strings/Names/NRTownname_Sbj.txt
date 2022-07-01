@@ -1,0 +1,6 @@
+﻿Tents
+Place
+Hideout
+Dwelling
+House
+Box

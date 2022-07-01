@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Nr_NpcRifle</defName>
+    <label>N.P.C Rifle</label>
+    <description>Weapon which Powerful Anti-Humanoid.But Non Effective Insects and Mechanoids.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/WeaponRanged/NpcRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>36000</WorkToMake>
+      <Mass>2.9</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.56</AccuracyLong>
+      <RangedWeapon_Cooldown>0.84</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>40</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+	<thingCategories Inherit="False">
+		<li>Nyaron_WeaponsRanged</li>
+	</thingCategories>
+    <weaponTags Inherit="False">
+      <li>Nyaron_weapon_striker</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>NR_LasBullet</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>31.9</range>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Secgun_fire</soundCast>
+        <soundCastTail>Secgun_tail</soundCastTail>
+        <muzzleFlashScale>4</muzzleFlashScale>
+      </li>
+	  
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>NR_LasBullet</defName>
+    <label>Shock Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Sec_bullet</texPath>
+	  <drawSize>1.6</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Shockbullet</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <speed>95</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

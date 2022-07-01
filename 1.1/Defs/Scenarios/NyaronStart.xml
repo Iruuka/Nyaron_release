@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ScenarioDef>
+	<defName>NyaronStart</defName>
+	<label>Crashed Trader ship(Nyaron)</label>	
+		<description>The trader ship that was traveling between planets was severely damaged.\nDuring the ship's collapse, drop-pods carrying lucky childens falls into the ground. </description>
+		<scenario>
+		<summary>Heavy damage at Fusion core. processing 'seperation' protocol.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>NyaronPlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>30</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>Steel</thingDef>
+				<count>125</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<count>5</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>225</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>20</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Silver</thingDef>
+				<count>50</count>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>After a few minutes, the drop-pod falls to the ground.</text>
+				<textKey>GameStartDialog</textKey>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+</Defs>

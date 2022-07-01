@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+	<HairDef>
+		<defName>Nr_Bobcut</defName>
+		<label>Nr_Bobcut</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronBobcut</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Long</defName>
+		<label>Nr_Long</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronLong</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Short</defName>
+		<label>Nr_Short</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronShort</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Twin</defName>
+		<label>Nr_Twin</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronTwin</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_ShortTwin</defName>
+		<label>Nr_ShortTwin</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronShortTwin</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>Nr_Pony</defName>
+		<label>Nr_Pony</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Nyaron/Hairs/NyaronPony</texPath>
+		<hairTags>
+			<li>Nyaron</li>
+		</hairTags>
+	</HairDef>
+	
+	
+</Defs>

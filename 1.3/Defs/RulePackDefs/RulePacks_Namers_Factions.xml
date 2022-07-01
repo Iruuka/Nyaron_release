@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Player initial namers - used initially -->
+
+  
+	<RulePackDef>
+		<defName>NyaronFactionNameUtility</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>Nr_FactionName_First->[Nr_Faction_First]</li>
+				<li>Nr_FactionName_First_Solo->[Nr_Faction_First_Solo]</li>
+				<li>Nr_FactionName_Last->[Nr_Faction_Last]</li>
+				<li>Nr_TownName_Sbject->[Nr_Town_Sbj]</li>
+				<li>Nr_TownName_Sbject_Solo->[Nr_Town_Sbj_Solo]</li>
+				<li>Nr_TownName_Object->[Nr_Town_Obj]</li>
+				<li>Nr_TownName_Objectof->[Nr_Town_Objof]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>Nr_Faction_First->Names/NRFactionname_First</li>
+				<li>Nr_Faction_First->Names/NRFactionname_First_Solo</li>
+				<li>Nr_Faction_Last->Names/NRFactionname_Last</li>
+				<li>Nr_Town_Sbj->Names/NRTownname_Sbj</li>
+				<li>Nr_Town_Sbj_Solo->Names/NRTownname_Sbj_Solo</li>
+				<li>Nr_Town_Obj->Names/NRTownname_Obj</li>
+				<li>Nr_Town_Objof->Names/NRTownname_Objof</li>
+			</rulesFiles>
+			
+		</rulePack>
+	</RulePackDef>
+	
+	
+	<RulePackDef>
+		<defName>NR_NamerFaction</defName>
+		<include>
+			<li>NyaronFactionNameUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+		    	<li>r_name->[Nr_Faction_First_Solo] Tribe</li>
+				<li>r_name->[Nr_Faction_First][Nr_Faction_Last] Tribe</li>
+				<li>r_name->[Nr_Faction_Last] Tribe</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NR_NamerSettlement</defName>
+		<include>
+			<li>NyaronFactionNameUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[Nr_Town_Obj] [Nr_Town_Sbj]</li>
+				<li>r_name->[Nr_Town_Objof]'s [Nr_Town_Sbj]</li>
+				<li>r_name->[Nr_Town_Sbj_Solo]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

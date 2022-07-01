@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_Blood_Nyaron</defName>
+    <label>blood</label>
+    <statBases>
+      <Beauty>-14</Beauty>
+      <Cleanliness>-10</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(179, 85, 73, 180)</color>
+    </graphicData>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+  </ThingDef>  
+   <ThingDef ParentName="BaseFilth">
+    <defName>Filth_Hairball_Nyaron</defName>
+    <label>털뭉치</label>
+    <graphicData>
+      <texPath>Things/Filth/Hball</texPath>
+      <graphicClass>Graphic_Cluster</graphicClass>
+    </graphicData>
+    <filth>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <terrainSourced>true</terrainSourced>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+  </ThingDef>
+  
+</Defs>

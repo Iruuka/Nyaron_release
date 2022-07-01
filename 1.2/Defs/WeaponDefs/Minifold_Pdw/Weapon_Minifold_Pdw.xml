@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Nr_MfoldPdw</defName>
+    <label>Minifold PDW</label>
+    <description>PDW which spreading Energy bullets.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/WeaponRanged/MfoldPdw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+<statBases>
+      <WorkToMake>24000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1.42</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+	<thingCategories Inherit="False">
+		<li>Nyaron_WeaponsRanged</li>
+	</thingCategories>
+    <weaponTags Inherit="False">
+      <li>Nyaron_weapon_scout</li>
+	  <li>Nyaron_weapon_striker</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>NR_EnergyBullet</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>20.9</range>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Cripistol_fire</soundCast>
+        <soundCastTail>Secgun_tail</soundCastTail>
+        <muzzleFlashScale>4</muzzleFlashScale>
+      </li>
+	  
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>NR_EnergyBullet</defName>
+    <label>Energy Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Energy_ball</texPath>
+	  <drawSize>0.7</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>EnergyBullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+	  <stoppingPower>0.5</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

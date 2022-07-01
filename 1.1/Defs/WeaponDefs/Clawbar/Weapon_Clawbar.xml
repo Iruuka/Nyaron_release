@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>Nr_Clawbar</defName>
+    <label>Clawbar</label>
+    <description>Cat-Foot Shaped weapon.Tear enemies with claws.</description>
+    <graphicData>
+			<texPath>Things/WeaponMelee/Clawbar</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <techLevel>Medieval</techLevel>
+		<costStuffCount>45</costStuffCount>
+		<statBases>
+			<WorkToMake>5500</WorkToMake>
+			<Mass>1.3</Mass>
+		</statBases>
+		<equippedAngleOffset>320</equippedAngleOffset>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+		</stuffCategories>
+    <weaponTags>
+      <li>NyaronMelee</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+	  <li>
+        <label>claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+</Defs>

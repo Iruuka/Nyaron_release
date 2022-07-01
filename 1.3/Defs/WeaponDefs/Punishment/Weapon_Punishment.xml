@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+   <ThingDef ParentName="BaseGun">
+    <defName>Nr_Punishment</defName>
+    <label>Last punishment incinerator</label>
+    <description>A single-use weapon that fires giant particle beam.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/WeaponRanged/Punishment</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>7</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+	<thingCategories Inherit="False">
+		<li>Nyaron_WeaponsRanged</li>
+	</thingCategories>
+    <weaponTags>
+    </weaponTags>
+	<weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tradeTags>
+      <li>ExoticNoTrade</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Nr_Puni</defaultProjectile>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <warmupTime>5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <range>44.9</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Nr_beamfire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetItems>false</canTargetItems>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>10</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef Class="Nyaron.ThingDef_NyaronPunisher" ParentName="BaseBullet">
+    <defName>Nr_Puni</defName>
+    <label>Punisher</label>
+    <graphicData>
+      <texPath>Things/Projectile/Nyaron/Nr_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile Class="Nyaron.NyaronPunisherProjectileProps">
+      <damageDef>Nr_PunisherDamage</damageDef>
+      <explosionRadius>2.7</explosionRadius>
+      <speed>5</speed>
+    </projectile>
+	<thingClass>Nyaron.Projectile_NyaronPunisher</thingClass>
+  </ThingDef>
+</Defs>

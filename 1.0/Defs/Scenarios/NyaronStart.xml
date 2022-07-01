@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ScenarioDef>
+	<defName>NyaronStart</defName>
+	<label>산산조각난 상선</label>	
+		<description>사고가 난 상선에 실려 있던 것은 수많은 원자재와 약품, 무기 그리고 상품으로써 가치가 있는 여러 생명체들입니다.</description>
+		<scenario>
+		<summary>원자로에 심각한 손상. 분리 프로토콜 이행.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>NyaronPlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>30</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>Steel</thingDef>
+				<count>125</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<count>5</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>225</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>20</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Silver</thingDef>
+				<count>50</count>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>잠시 후, 선실이 폭발하면서 격벽구조로 되어있는 선실이 분리되어 주변행성에 흩뿌려 졌습니다. 운좋게도 4체의 '생명체'가 동면포드에 탑승한 채로 행성표면에 안착 합니다.</text>
+				<textKey>GameStartDialog</textKey>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+</Defs>

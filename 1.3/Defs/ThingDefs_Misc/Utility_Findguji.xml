@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>FindGuji</defName>
+    <label>gujifinder</label>
+	<thingClass>ThingWithComps</thingClass>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+      <texPath>Things/Projectile/Nyaron/Nr_Empty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="Nyaron.CompProperties_Findguji">
+	  </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

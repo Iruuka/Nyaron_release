@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+<!--Apparels-->
+
+<!--Weapons-->
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_gladiator</li>
+	</value>
+</Operation>
+
+</Patch>

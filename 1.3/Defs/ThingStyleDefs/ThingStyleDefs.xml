@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingStyleDef>
+    <defName>Nyaron_Gladius</defName>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Ideo/Gladius_Nyaron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+
+  <ThingStyleDef>
+    <defName>Nyaron_LongSword</defName>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Ideo/LongSword_Nyaron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  
+    <ThingStyleDef>
+    <defName>Nyaron_Shortspear</defName>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Ideo/ShortSpear_Nyaron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  
+      <ThingStyleDef>
+    <defName>Nyaron_AssaultRifle</defName>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Ideo/AssaultRifle_Nyaron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+</Defs>

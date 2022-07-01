@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef Abstract="True" Name="NRSound">
+  </SoundDef>
+  <SoundDef ParentName="NRSound">
+    <defName>Secgun_fire</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Secgun_fire</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange><min>8</min><max>8</max></volumeRange>
+        <pitchRange>
+          <min>0.9082353</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef ParentName="NRSound">
+    <defName>Cripistol_fire</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Cripistol_fire</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange><min>18</min><max>18</max></volumeRange>
+        <pitchRange>
+          <min>0.9082353</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef ParentName="NRSound">
+    <defName>Secgun_tail</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+	    <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Secgun_tail</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>24.11765</min>        
+          <max>30</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.8852941</min>        
+          <max>1.114706</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+    <SoundDef ParentName="NRSound">
+    <defName>Nr_beamfire</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>2</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Nr_beam</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange><min>18</min><max>18</max></volumeRange>
+        <pitchRange>
+          <min>0.9082353</min>        
+          <max>1.045882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Shared content -->
+
+  <RulePackDef>
+    <defName>DeityTypeMakerNyaron</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityType->SpiritualHangira</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

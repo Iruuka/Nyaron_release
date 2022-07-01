@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+<!--Apparels-->
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Apparel_CowboyHat"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparel_vanguard</li>
+	</value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Apparel_Tuque"]/apparel/tags</xpath>
+	<value>
+		<li>Nyaron_apparel_vanguard</li>
+	</value>
+</Operation>
+
+<!--Weapons-->
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_Club"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_vanguard</li>
+	</value>
+</Operation>
+
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_vanguard</li>
+	</value>
+</Operation>
+
+
+</Patch>

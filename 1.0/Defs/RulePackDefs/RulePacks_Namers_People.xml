@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerNyaronUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>NameNyaronMaleFirst->Names/Nyaron_First_Male</li>
+        <li>NameNyaronFemaleFirst->Names/Nyaron_First_Female</li>
+        <li>NameNyaronUnisexLast->Names/Nyaron_Last_Unisex</li>
+        <li>NameNyaronMaleNick->Names/Nyaron_Nick_Male</li>
+        <li>NameNyaronFemaleNick->Names/Nyaron_Nick_Female</li>
+        <li>NameNyaronUnisexNick->Names/Nyaron_Nick_Unisex</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerNyaronMale</defName>
+    <include>
+      <li>NamerNyaronUtility</li>
+	  <li>TribalWordUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=6)->[NameNyaronMaleFirst] '[NameNyaronMaleNick]' [NameNyaronUnisexLast]</li>
+        <li>r_name(p=5)->[NameNyaronMaleFirst] '[NameNyaronUnisexNick]' [NameNyaronUnisexLast]</li>
+        <li>r_name(p=4)->[NameNyaronMaleFirst] '[AnimalBadass]' [NameNyaronUnisexLast]</li>
+        <li>r_name(p=3)->[NameNyaronMaleFirst] '[Color]' [NameNyaronUnisexLast]</li>
+        <li>r_name(p=2)->[NameNyaronMaleFirst] [NameNyaronUnisexLast]</li>
+        <!-- <li>r_name(p=6)->[NamePersonMale]</li> -->
+        <li>r_name->[exoticname]</li>
+
+        <li>exoticname(p=2)->[AdjectiveBadass]</li>
+        <li>exoticname(p=2)->[PersonBadass]</li>
+        <li>exoticname->[Enemy]</li>
+        <li>exoticname->[ConceptAny]</li>
+        <li>exoticname->[Color]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerNyaronFemale</defName>
+     <include>
+      <li>NamerNyaronUtility</li>
+	  <li>TribalWordUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=6)->[NameNyaronUnisexLast] [NameNyaronFemaleFirst]</li>
+        <!-- <li>r_name(p=6)->[NamePersonFemale]</li> -->
+        <li>exoticname(p=2)->[AdjectiveBadass]</li>
+        <li>exoticname(p=2)->[PersonBadass]</li>
+        <li>exoticname->[Enemy]</li>
+        <li>exoticname->[ConceptAny]</li>
+        <li>exoticname->[Color]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

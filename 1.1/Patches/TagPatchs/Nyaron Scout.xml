@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+<!--Apparels-->
+
+
+<!--Weapons-->
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_Revolver"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_scout</li>
+	</value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_Autopistol"]/weaponTags</xpath>
+	<value>
+		<li>Nyaron_weapon_scout</li>
+	</value>
+</Operation>
+
+</Patch>

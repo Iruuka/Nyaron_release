@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenPartDef>
+    <defName>Nyaron_arrived</defName>
+    <label>with a Cat</label>
+    <category>Fixed</category>
+    <scenPartClass>Nyaron.ScenPart_NyaronArrived</scenPartClass>
+    <summaryPriority>500</summaryPriority>
+  </ScenPartDef>
+
+</Defs>

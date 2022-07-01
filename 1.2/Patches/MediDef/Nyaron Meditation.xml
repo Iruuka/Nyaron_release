@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Patch>
+
+<!--Apparels-->
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+	<value>
+		<li>
+		<categoryName>Nyaron_Standard</categoryName>
+        <slot>Childhood</slot>
+		</li>
+	</value>
+</Operation>
+
+</Patch>

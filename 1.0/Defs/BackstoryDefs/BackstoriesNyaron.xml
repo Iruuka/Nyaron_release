@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- 냐론 디폴트 -->
+<AlienRace.BackstoryDef Name="Nyaron_BaseBackstory" Abstract="True">
+		<disallowedTraits>
+			<li>
+				<defName>Beauty</defName>
+				<degree>-2</degree>
+				<chance>100</chance>
+			</li>
+			<li>
+				<defName>Undergrounder</defName>
+				<degree>0</degree>
+				<chance>100</chance>
+			</li>
+		</disallowedTraits>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	</AlienRace.BackstoryDef>
+<!-- 냐론 유년기 -->
+ 
+ <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Child_Incubator</defName>
+    <title>배양기 아기</title>
+	<titleShort>배양기 아기</titleShort>
+    <baseDescription>태아부터 12세까지 배양기에서 길러졌습니다.</baseDescription>
+	
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	
+	
+	<slot>Childhood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+	  <li>Nyaron_Init</li>
+    </spawnCategories>
+ </AlienRace.BackstoryDef>
+<!-- 냐론 성년기 -->
+
+
+<AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Leader1</defName>
+    <title>우두머리</title>
+	<titleShort>우두머리</titleShort>
+    <baseDescription>[PAWN_nameDef] 은(는) 무리를 통솔할 만한 자질을 갖추었습니다. 명령에 반대하는 방법은 오직 싸움에서 이겨 새로운 우두머리가 되는 것 뿐입니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>ManualDumb</li>
+    </workDisables>
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+ </AlienRace.BackstoryDef>
+ 
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Soldier</defName>
+    <title>병사</title>
+    <titleShort>병사</titleShort>
+    <baseDescription>[PAWN_nameDef] 은(는) 수많은 전투훈련과 각종 무기를 다루는 법을 배웠습니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>Intellectual</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Dancer</defName>
+    <title>춤꾼</title>
+    <titleShort>춤꾼</titleShort>
+    <baseDescription>고양이춤은 지나가던 누구한테 물어봐도 알 정도로 인기입니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>4</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>-1</amount>
+		</li>
+	</skillGains>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+    
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Singer</defName>
+    <title>아이돌 가수</title>
+    <titleShort>아이돌 가수</titleShort>
+    <baseDescription>가창력과는 상관없이 고양이귀와 꼬리의 섬세한 움직임은 무대를 휘어잡는데 충분했습니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>5</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>5</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-3</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-2</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+        <li>Cooking</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+      
+	  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Hunter</defName>
+    <title>사냥꾼</title>
+    <titleShort>사냥꾼</titleShort>
+    <baseDescription>[PAWN_nameDef] 은(는) 사냥의 명수입니다. 한번 지목한 타겟은 거의 놓치는 일이 없습니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>6</amount>
+		</li>
+	</skillGains>
+	
+	<workDisables>
+        <li>PlantWork</li>
+    </workDisables>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+    <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Police</defName>
+    <title>경찰</title>
+    <titleShort>경찰</titleShort>
+    <baseDescription>[PAWN_nameDef] 의 추적기술은 각종 강력사건에서 유효할 뿐만 아니라 부서의 마스코트 역할까지 맡는 경우도 종종 있습니다.</baseDescription>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>5</amount>
+		</li>
+	</skillGains>
+	
+	<workDisables>
+        <li>Artistic</li>
+    </workDisables>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+
+    <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Exproler</defName>
+    <title>탐험가</title>
+    <titleShort>탐험가</titleShort>
+    <baseDescription>[PAWN_nameDef] 의 동물적인 감각은 미처 알지 못한 각종 위협들에 대한 대처를 가능하게 해줍니다.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Cooking</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Standard</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_CustomMaid</defName>
+    <title>메이드</title>
+    <titleShort>메이드</titleShort>
+    <baseDescription>누군가는 고양이귀 머리띠가 아닌 진짜 고양이귀'커스텀'메이드를 원했습니다.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Cooking</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Petgirl</defName>
+    <title>애완소녀</title>
+    <titleShort>애완소녀</titleShort>
+    <baseDescription>키워라 집사.</baseDescription>
+	<workDisables>
+        <li>Animals</li>
+		<li>Cleaning</li>
+		<li>Cooking</li>
+		<li>Crafting</li>
+		<li>Firefighting</li>
+		<li>Intellectual</li>
+		<li>ManualDumb</li>
+		<li>ManualSkilled</li>
+		<li>Mining</li>
+		<li>PlantWork</li>
+		<li>Social</li>
+    </workDisables>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef ParentName="Nyaron_BaseBackstory">
+    <defName>Nyaron_Adult_Nekopara</defName>
+    <title>제과점 간판소녀</title>
+    <titleShort>제과점 간판소녀</titleShort>
+    <baseDescription>[PAWN_nameDef] 은(는) "파손주의!"라고 쓰여진 스티커가 덕지덕지 붙어있는 커다란 택배상자에 포장되어 있었습니다.</baseDescription>
+		<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Cooking</defName>
+			<amount>4</amount>
+		</li>
+	</skillGains>
+	
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>Nyaron_Init</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+</Defs>

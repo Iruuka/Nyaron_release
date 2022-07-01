@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Check if Kijin mod exists -->
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+	<!-- Check Mod name or workshop ID written in PublishedFileId.txt (Confirm existence of other Mod from this Mod) -->
+			<li>Nyaron(WIP)</li>
+			<li>1854376306</li>
+		</mods>
+	<!-- Add modded race Kijin to this Patch -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[@Name = "DESurgeries"]/recipeUsers</xpath>
+			<value>
+				<li>Alien_Nyaron</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

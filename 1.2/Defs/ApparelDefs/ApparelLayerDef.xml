@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ApparelLayerDef>
+    <defName>Nr_FixedArmor</defName>
+    <label>fixedarmor</label>
+    <drawOrder>100</drawOrder>
+  </ApparelLayerDef>
+   
+  
+</Defs>

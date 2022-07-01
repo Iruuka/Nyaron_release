@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>		
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						  <StyleCategoryDef>
+    <defName>Nyaron</defName>
+    <label>Nyaron</label>
+    <iconPath>ui/stylecategories/Nyaron</iconPath>
+    <soundOngoingRitual>RitualSustainer_Totemic</soundOngoingRitual>
+    <ritualVisualEffectDef>Totemic</ritualVisualEffectDef>
+    <thingDefStyles>
+      <li>
+        <thingDef>MeleeWeapon_Gladius</thingDef>
+        <styleDef>Nyaron_Gladius</styleDef>
+      </li>
+	  <li>
+        <thingDef>MeleeWeapon_LongSword</thingDef>
+        <styleDef>Nyaron_LongSword</styleDef>
+      </li>
+	  <li>
+        <thingDef>MeleeWeapon_Ikwa</thingDef>
+        <styleDef>Nyaron_Shortspear</styleDef>
+      </li>
+	  <li>
+        <thingDef>Gun_AssaultRifle</thingDef>
+        <styleDef>Nyaron_AssaultRifle</styleDef>
+      </li>	  
+    </thingDefStyles>
+  </StyleCategoryDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

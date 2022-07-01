@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "Nr_Lightbringer"]</xpath>
+            <value>             
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+            </value>
+        </match>
+    </Operation>
+</Patch>

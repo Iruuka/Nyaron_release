@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Nyaron Mod - Research  ========================= -->
+	<!-- ==================== 원시연구  ========================= -->
+	<!-- ==================== 중세연구  ========================= -->
+	<!-- ==================== 현대연구  ========================= -->
+	<!-- ==================== 미래연구  ========================= -->
+	
+	
+	
+	
+	<ResearchProjectDef>
+		<tab>Nyaron_RTab</tab>
+		<defName>Npcrifle</defName>
+		<label>N.P.C Rifle</label>
+		<description>Build weapon which Powerful Anti-Humanoid.</description>
+		<baseCost>3000</baseCost>
+		<prerequisites>
+        <li>Fabrication</li>
+        </prerequisites>
+		<techLevel>Spacer</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+	
+</Defs>

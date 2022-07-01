@@ -1,0 +1,13 @@
+﻿Fists
+Sword
+Lance
+Shield
+Arrow
+Hammer
+Scythe
+Glaive
+Mace
+Flail
+Shuriken
+Claws
+Dagger

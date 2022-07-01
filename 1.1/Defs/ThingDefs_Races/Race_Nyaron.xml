@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<AlienRace.RaceSettings>
+    <defName>Nyaron_Settings</defName>
+     <pawnKindSettings>
+            
+			<startingColonists>
+				<li>
+				<pawnKindEntries>
+					<li>
+                    <kindDefs>
+                        <li>NyaronPlayerColonist</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+					</li>
+				</pawnKindEntries>
+					<factionDefs>
+						<li>NyaronPlayerColony</li> 
+					</factionDefs>
+				</li>
+			</startingColonists>
+			<alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>NyaronSlave</li>
+                    </kindDefs>
+                    <chance>30.0</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds> <!-- pawnkinds listed here will show up as chased refugees for the event -->
+                <li>
+                    <kindDefs>
+                        <li>NyaronRefugee</li>
+                    </kindDefs>
+                    <chance>30.0</chance>
+                </li>
+            </alienrefugeekinds>
+            <alienwandererkinds> <!-- pawnkinds listed here will show up as wanders that join your colony for the event -->
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+								<li>Nyaron_Colonist</li>
+                            </kindDefs>
+                            <chance>30.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>NyaronFaction</li> 
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+        </pawnKindSettings>
+  </AlienRace.RaceSettings>
+
+
+<ThingDef Name="BaseNyaronPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <Mass>65</Mass>
+    </statBases>
+	<inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+
+<AlienRace.ThingDef_AlienRace ParentName="BaseNyaronPawn">
+    <defName>Alien_Nyaron</defName>
+    <label>Nyaron</label>
+    <description>the Marvelous gift of glitterworld bionics. Humanoid with cat ears and tail.</description>
+    <!-- 에일리언레이스셋팅 -->
+	
+	<alienRace>
+        <graphicPaths>
+			<!-- This tells the game to look in the folder MODFOLER/Textures/Things/Pawn/Heads/ for Images -->
+            <!-- -->
+			<li>
+                <head>Things/Pawn/Nyaron/Heads/</head>
+                <body>Things/Pawn/Nyaron/Bodies/</body>
+                <skeleton>Things/Pawn/Nyaron/Bodies/Dessicated/Dessicated_Male</skeleton>
+                <skull>Things/Pawn/Nyaron/Heads/Skull/Skull</skull>
+            </li>
+			<!-- -->
+        </graphicPaths>
+        <generalSettings>
+            <humanRecipeImport>true</humanRecipeImport>
+            <maleGenderProbability>0</maleGenderProbability>
+            <immuneToAge>false</immuneToAge>
+			<maxDamageForSocialfight>8</maxDamageForSocialfight>
+			<!-- 
+			<useOnlyPawnkindBackstories>true</useOnlyPawnkindBackstories>-->
+            <forcedRaceTraitEntries>
+
+            </forcedRaceTraitEntries>
+            <alienPartGenerator>
+				<!-- game looks for files in the <head> path named aliencrowntypes_south, _east, _north (And _west, if present, it is not required though) (If genderedHeads is enabled suffix should me _Male_south or _Female_south)(Masks use the same nameing convetion but with an m at the end e.g. _southm)-->
+                <aliencrowntypes>
+                    <li>Average_Normal</li>
+					<li>Average_Pointy</li>
+					<li>Average_Camber</li>
+					<li>Average_Cred</li>
+					<li>Average_Cvio</li>
+                </aliencrowntypes>
+				<!-- game looks for files in the <body> path named alienbodytypes_south, _east, _north (And _west, if present, it is not required though) (If genderedHeads is enabled suffix should me _Male_south or _Female_south)(Masks use the same nameing convetion but with an m at the end e.g. _southm)-->
+                <alienbodytypes>
+                <li>Female</li>
+                </alienbodytypes>
+				<headOffset>(0.0, 0.01)</headOffset>	
+            <!-- 피부 프리셋색상 설정 --> 
+				<alienskincolorgen Class="ColorGenerator_Options">
+                <options>
+                    <li>
+                        <weight>1</weight>
+                        <only>RGBA(1,0.77,0.71,1)</only>
+                    </li>
+					<li>
+                        <weight>1</weight>
+                        <only>RGBA(1,0.95,0.82,1)</only>
+                    </li>
+					<li>
+                        <weight>1</weight>
+                        <only>RGBA(1.0,0.90,0.73,1)</only>
+                    </li>
+					<li>
+                        <weight>1</weight>
+                        <only>RGBA(1.0,0.8,0.64,1)</only>
+                    </li>
+                    <li>
+                        <weight>1</weight>
+                        <only>RGBA(0.98,0.87,0.79,1)</only>
+                    </li>
+					<li>
+                        <weight>1</weight>
+                        <only>RGBA(0.89,0.65,0.51,1)</only>
+                    </li>
+                    <li>
+                        <weight>1</weight>
+                        <only>RGBA(0.80,0.63,0.51,1)</only>
+                    </li>
+					<li>
+                        <weight>1</weight>
+                        <only>RGBA(0.57,0.38,0.29,1)</only>
+                    </li>
+                </options>
+            </alienskincolorgen>
+            <!-- 머리카락 프리셋색상 설정 -->
+				<alienhaircolorgen Class="ColorGenerator_Options">
+                    <options>
+			 
+			<!-- 검정 -->
+			<li>
+                <weight>4</weight>
+                <only>RGBA(0.13,0.13,0.13,1)</only>
+            </li>
+			<!-- 치즈 -->
+			<li>
+                <weight>4</weight>
+                <only>RGBA(1.0,0.9,0.4,1)</only>
+            </li>
+			<!-- 브라운 -->
+			<li>
+                <weight>4</weight>
+                <only>RGBA(0.44,0.28,0.16,1)</only>
+            </li>
+			<!-- 흰고양이 -->
+			 <li>
+                <weight>3</weight>
+                <only>RGBA(1.0,1.0,1.0,1)</only>
+            </li>
+			<!-- 검푸른 -->
+			<li>
+                <weight>3</weight>
+                <only>RGBA(0.13,0.12,0.19,1)</only>
+            </li>
+			<!-- 오렌지 -->
+			<li>
+                <weight>2</weight>
+                <only>RGBA(1.0,0.5,0.35,1)</only>
+            </li>
+			<!-- 아이보리 -->
+			<li>
+                <weight>2</weight>
+                <only>RGBA(0.93,0.90,0.77,1)</only>
+            </li>
+			<!-- 베이지 -->
+			<li>
+                <weight>2</weight>
+                <only>RGBA(0.96,0.96,0.86,1)</only>
+            </li>
+			<!-- 카뎃블루 -->
+			<li>
+                <weight>1</weight>
+                <only>RGBA(0.37,0.62,0.63,1)</only>
+            </li>
+			<!-- 메론 -->
+			<li>
+                <weight>1</weight>
+                <only>RGBA(0.69,0.9,0.61,1)</only>
+            </li>
+			<!-- 카민레드 -->
+			<li>
+                <weight>1</weight>
+                <only>RGBA(0.59,0.0,0.09,1)</only>
+            </li>
+			<!-- 핑크 -->
+			<li>
+                <weight>1</weight>
+                <only>RGBA(1.0,0.45,0.60,1)</only>
+            </li>
+                    </options>
+                </alienhaircolorgen>
+                	
+			<useSkincolorForHair>false</useSkincolorForHair>
+			<customDrawSize>(1, 1)</customDrawSize>
+			<customHeadDrawSize>(1, 1)</customHeadDrawSize>
+			<customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+            <bodyAddons>
+            <li>
+				<path>Things/Pawn/Addons/Tails/Tail</path>
+                <bodyPart>tail</bodyPart>
+                <useSkinColor>false</useSkinColor>
+                <inFrontOfBody>false</inFrontOfBody>
+                <layerOffset>-0.0</layerOffset>
+                <offsets>
+                <south>
+                                    <bodyTypes>
+                                    <Male>(0,0)</Male>
+                                    <Female>(0,0)</Female>
+                                    </bodyTypes>
+                </south>
+
+                <north>
+                                    <bodyTypes>
+                                    <Male>(0,0.0)</Male>
+                                    <Female>(0,0.38)</Female>
+                                    </bodyTypes>
+                </north>
+
+                <east>
+                                    <bodyTypes>
+                                    <Male>(0,0)</Male>
+                                    <Female>(-0.04,0.05)</Female>
+                                    </bodyTypes>
+                </east>
+                </offsets>
+                <hediffGraphics>
+                </hediffGraphics>
+            </li>
+			
+			<li>
+				<path>Things/Pawn/Addons/Ears/Cat_LeftBackEar</path>
+                <bodyPart>left ear</bodyPart>
+				<drawSize>1</drawSize>
+                <useSkinColor>false</useSkinColor>
+                <inFrontOfBody>false</inFrontOfBody>
+                <layerOffset>-0.0</layerOffset>
+                <offsets>
+                <south>
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.56)</Male>
+                                    <Female>(-0.43,0.56)</Female>
+                                    </bodyTypes>
+                </south>
+
+                <north>
+                                    <bodyTypes>
+                                    <Male>(0,0.88)</Male>
+                                    <Female>(0,0.88)</Female>
+                                    </bodyTypes>
+                </north>
+				<!-- 여기가 귀-->
+				<east>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.53,0.58)</Male>
+                                    <Female>(-0.53,0.58)</Female>
+                                    </bodyTypes>
+                </east>
+		
+				<west>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.58)</Male>
+                                    <Female>(-0.43,0.58)</Female>
+                                    </bodyTypes>
+                </west>
+				
+                </offsets>
+                <hediffGraphics>
+                </hediffGraphics>
+				<hiddenUnderApparelFor>
+					<li>FullHead</li>
+				</hiddenUnderApparelFor>
+            </li>
+			<li>
+				<path>Things/Pawn/Addons/Ears/Cat_LeftFrontEar</path>
+                <bodyPart>left ear</bodyPart>
+				<drawSize>1</drawSize>
+                <useSkinColor>false</useSkinColor>
+                <inFrontOfBody>true</inFrontOfBody>
+                <layerOffset>-0.0</layerOffset>
+                <offsets>
+				 <south>
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.56)</Male>
+                                    <Female>(-0.43,0.56)</Female>
+                                    </bodyTypes>
+                </south>
+
+                <north>
+                                    <bodyTypes>
+                                    <Male>(0,0.88)</Male>
+                                    <Female>(0,0.88)</Female>
+                                    </bodyTypes>
+                </north>
+				<east>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.53,0.58)</Male>
+                                    <Female>(-0.53,0.58)</Female>
+                                    </bodyTypes>
+                </east>
+		
+				<west>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.58)</Male>
+                                    <Female>(-0.43,0.58)</Female>
+                                    </bodyTypes>
+                </west>
+                </offsets>
+                <hediffGraphics>
+                </hediffGraphics>
+				<hiddenUnderApparelFor>
+					<li>FullHead</li>
+				</hiddenUnderApparelFor>
+            </li>
+			<li>
+				<path>Things/Pawn/Addons/Ears/Cat_RightBackEar</path>
+                <bodyPart>right ear</bodyPart>
+				<drawSize>1</drawSize>
+                <useSkinColor>false</useSkinColor>
+                <inFrontOfBody>false</inFrontOfBody>
+                <layerOffset>-0.0</layerOffset>
+                <offsets>
+                <south>
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.56)</Male>
+                                    <Female>(-0.43,0.56)</Female>
+                                    </bodyTypes>
+                </south>
+
+                <north>
+                                    <bodyTypes>
+                                    <Male>(0,0.88)</Male>
+                                    <Female>(0,0.88)</Female>
+                                    </bodyTypes>
+                </north>
+				<!-- 여기가 귀-->
+				<east>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.53,0.58)</Male>
+                                    <Female>(-0.53,0.58)</Female>
+                                    </bodyTypes>
+                </east>
+		
+				<west>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.58)</Male>
+                                    <Female>(-0.43,0.58)</Female>
+                                    </bodyTypes>
+                </west>
+				
+                </offsets>
+                <hediffGraphics>
+                </hediffGraphics>
+				
+				<hiddenUnderApparelFor>
+					<li>FullHead</li>
+				</hiddenUnderApparelFor>
+            </li>
+			<li>
+				<path>Things/Pawn/Addons/Ears/Cat_RightFrontEar</path>
+                <bodyPart>right ear</bodyPart>
+				<drawSize>1</drawSize>
+                <useSkinColor>false</useSkinColor>
+                <inFrontOfBody>true</inFrontOfBody>
+                <layerOffset>-0.0</layerOffset>
+                <offsets>
+				 <south>
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.56)</Male>
+                                    <Female>(-0.43,0.56)</Female>
+                                    </bodyTypes>
+                </south>
+
+                <north>
+                                    <bodyTypes>
+                                    <Male>(0,0.88)</Male>
+                                    <Female>(0,0.88)</Female>
+                                    </bodyTypes>
+                </north>
+				<east>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.53,0.62)</Male>
+                                    <Female>(-0.53,0.58)</Female>
+                                    </bodyTypes>
+                </east>
+		
+				<west>
+				
+                                    <bodyTypes>
+                                    <Male>(-0.43,0.62)</Male>
+                                    <Female>(-0.43,0.58)</Female>
+                                    </bodyTypes>
+                </west>
+                </offsets>
+                <hediffGraphics>
+                </hediffGraphics>
+				
+				<hiddenUnderApparelFor>
+					<li>FullHead</li>
+				</hiddenUnderApparelFor>
+            </li>
+            </bodyAddons>
+            </alienPartGenerator>
+            <chemicalSettings>
+			<!--
+                <li>
+                    <chemical>Smokeleaf</chemical>
+                    <reactions>
+                        <li Class="IngestionOutcomeDoer_GiveHediff">
+                                <hediff>LungFailure</hediff>
+                                <severity>0.75</severity>
+                        </li>
+                    </reactions>
+                </li>
+                <li>
+                    <chemical>Luciferium</chemical>
+                    <ingestible>false</ingestible>
+                </li>
+			-->
+            </chemicalSettings>
+        </generalSettings>
+        <hairSettings>
+            <hasHair>true</hasHair>
+            <getsGreyAt>75</getsGreyAt> 
+            <hairTags>
+				 <li>Nyaron</li>
+            </hairTags>
+        </hairSettings>
+        <relationSettings>
+            <relationChanceModifierChild>0</relationChanceModifierChild>
+            <relationChanceModifierExLover>0</relationChanceModifierExLover>
+            <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+            <relationChanceModifierFiance>0</relationChanceModifierFiance>
+            <relationChanceModifierLover>0</relationChanceModifierLover>
+            <relationChanceModifierParent>0</relationChanceModifierParent>
+            <relationChanceModifierSibling>0</relationChanceModifierSibling>
+            <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+        </relationSettings>
+		
+		
+		<!-- 기분관련 -->	
+				
+		<thoughtSettings>
+
+			
+			<cannotReceiveThoughts>
+			<li>NeedOutdoors</li>
+			<li>EnvironmentDark</li>
+			</cannotReceiveThoughts>
+			
+			
+			<restrictedThoughts>
+			<li>NyaronNeedOutdoors</li>
+			</restrictedThoughts>
+		</thoughtSettings>
+		
+		
+        <raceRestriction>
+		<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+		<apparelList>
+              <li>Nr_CatHoodie</li>
+			  <li>Nr_CatJacket</li>
+			  <li>Nr_PowerArmor</li>
+			  <li>Nr_CatSUniform</li>
+			  <li>Nr_CatMaid</li>
+			  <li>Nr_CatMaidBand</li>
+        </apparelList>
+		<whiteApparelList>
+		
+		</whiteApparelList>
+            <researchList>
+                <li>
+                    <projects> <!-- list the defname of any project that Only this race can reseach -->
+					<!-- <li>Nyaron_Reseach_ProjectA</li> -->
+					<!-- <li>Nyaron_Reseach_ProjectB</li> -->
+					<!-- <li>Nyaron_Reseach_ProjectC</li> -->
+                    </projects>
+                    <apparelList> <!-- list the defname of any apparel that this race requires to wear to reseach -->
+					<!-- <li>Nyaron_Reseach_Apparel</li> -->
+                    </apparelList>
+                </li>
+            </researchList>
+            <recipeList> <!-- list the defname of any recipie that Only this race can do -->
+				<!-- <li>Nyaron_ApparelA</li> -->
+				<!-- <li>Nyaron_ApparelB</li> -->
+				<!-- <li>Nyaron_ApparelC</li> -->
+				<!-- <li>Nyaron_Reseach_Apparel</li> -->
+				<!-- <li>Nyaron_WeaponA</li> -->
+				<!-- <li>Nyaron_WeaponB</li> -->
+				<!-- <li>Nyaron_WeaponC</li> -->
+            </recipeList>
+        </raceRestriction>
+    </alienRace>
+	<statBases>
+      <!--스펙설정(일반)-->
+	  <MarketValue>2000</MarketValue>
+	  <CarryingCapacity>75</CarryingCapacity>
+	  <GlobalLearningFactor>1.0</GlobalLearningFactor>
+	  <PsychicSensitivity>0.8</PsychicSensitivity>
+	  <RestRateMultiplier>0.8</RestRateMultiplier>
+	  <RestFallScale>1.25</RestFallScale>
+	  <!--스펙(일)-->
+	  <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+	  <ForagedNutritionPerDay>0</ForagedNutritionPerDay>
+	  <NegotiationAbility>1.0</NegotiationAbility>
+	  <SocialImpact>1.0</SocialImpact>
+	  <TradePriceImprovement>1.0</TradePriceImprovement>
+      <LeatherAmount>40</LeatherAmount>
+      <Flammability>1.0</Flammability>
+	  <PainShockThreshold>0.78</PainShockThreshold>
+	  <MentalBreakThreshold>0.30</MentalBreakThreshold>
+      <ComfyTemperatureMin>18</ComfyTemperatureMin>
+      <ComfyTemperatureMax>30</ComfyTemperatureMax>
+	  <!--스펙설정(전투)-->
+	  <MoveSpeed>5.0</MoveSpeed>
+	  <AimingDelayFactor>0.95</AimingDelayFactor>
+	  <MeleeDodgeChance>1.5</MeleeDodgeChance>
+	  <MeleeHitChance>1.2</MeleeHitChance>
+
+    </statBases>
+        <tools>
+      <li>
+        <label>Left Nyan Punch</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>Right Nyan Punch</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>Teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>Headbutt</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.07</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>75</lifeExpectancy>
+      <leatherDef>Leather_Nyaron</leatherDef>
+	  <fleshType>Flesh_Nyaron</fleshType>
+      <!-- 
+	  <nameCategory>HumanStandard</nameCategory>
+      -->
+	  <nameGenerator>NamerNyaronMale</nameGenerator>
+      <nameGeneratorFemale>NamerNyaronFemale</nameGeneratorFemale>
+      <!-- 
+	  <body>Human</body>
+      -->
+	  <body>Nyaron</body>
+      <bloodDef>Filth_Blood_Nyaron</bloodDef>	
+      <meatColor>(219, 105, 82)</meatColor>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1.6</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+		  
+	  <soundWounded>Pawn_Cat_Injured</soundWounded>
+	  <soundDeath>Pawn_Cat_Death</soundDeath>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+		  
+	  <soundWounded>Pawn_Cat_Injured</soundWounded>
+	  <soundDeath>Pawn_Cat_Death</soundDeath>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+		  
+	  <soundWounded>Pawn_Cat_Injured</soundWounded>
+	  <soundDeath>Pawn_Cat_Death</soundDeath>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+		  
+	  <soundWounded>Pawn_Cat_Injured</soundWounded>
+	  <soundDeath>Pawn_Cat_Death</soundDeath>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+		  
+	  <soundWounded>Pawn_Cat_Injured</soundWounded>
+	  <soundDeath>Pawn_Cat_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+	  
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+		  <li>(16,60)</li>
+		  <li>(23,100)</li>
+          <li>(32,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>
+       <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+</AlienRace.ThingDef_AlienRace>
+
+</Defs>
