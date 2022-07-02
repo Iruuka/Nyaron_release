@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-   <Make_Nr_CatHoodie.label>고양이 후드티 제작</Make_Nr_CatHoodie.label> 
-   <Make_Nr_CatHoodie.description>고양이 후드티를 제작합니다.</Make_Nr_CatHoodie.description> 
-   <Make_Nr_CatHoodie.jobString>고양이 후드티 제작</Make_Nr_CatHoodie.jobString> 
+   <Make_Nr_CatHoodie.label>Sweat Chat</Make_Nr_CatHoodie.label> 
+   <Make_Nr_CatHoodie.description>Adorable Sweat Chat.</Make_Nr_CatHoodie.description> 
+   <Make_Nr_CatHoodie.jobString>Création d'un Sweat Chat</Make_Nr_CatHoodie.jobString> 
 
-   <Make_Nr_CatJacket.label>전투 재킷 제작</Make_Nr_CatJacket.label> 
-   <Make_Nr_CatJacket.description>전투 재킷을 제작합니다.</Make_Nr_CatJacket.description> 
-   <Make_Nr_CatJacket.jobString>전투 재킷 제작</Make_Nr_CatJacket.jobString> 
+   <Make_Nr_CatJacket.label>Veste de Combat Nyaron</Make_Nr_CatJacket.label> 
+   <Make_Nr_CatJacket.description>Veste ouverte surprenament solide.</Make_Nr_CatJacket.description> 
+   <Make_Nr_CatJacket.jobString>Création d'une veste de combat</Make_Nr_CatJacket.jobString> 
 
-   <Make_Nr_PowerArmor.label>냐론 파워아머 제작</Make_Nr_PowerArmor.label> 
+   <!-- <Make_Nr_PowerArmor.label>Armure d'Énergie Nyaron</Make_Nr_PowerArmor.label> 
    <Make_Nr_PowerArmor.description>냐론 파워아머를 제작합니다.</Make_Nr_PowerArmor.description> 
    <Make_Nr_PowerArmor.jobString>냐론 파워아머 제작</Make_Nr_PowerArmor.jobString> 
 
@@ -27,7 +27,7 @@
 
    <Make_Nr_NpcRifle.label>N.P.C 라이플 제작</Make_Nr_NpcRifle.label> 
    <Make_Nr_NpcRifle.description>N.P.C 라이플을 제작합니다.</Make_Nr_NpcRifle.description> 
-   <Make_Nr_NpcRifle.jobString>N.P.C 라이플 제작</Make_Nr_NpcRifle.jobString> 
+   <Make_Nr_NpcRifle.jobString>N.P.C 라이플 제작</Make_Nr_NpcRifle.jobString> -->
 
 
 </LanguageData>
