@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-   <Leather_Nyaron.label>냐론 가죽</Leather_Nyaron.label> 
-   <Leather_Nyaron.description>냐론 가죽입니다</Leather_Nyaron.description> 
-   <Leather_Nyaron.stuffProps.stuffAdjective>냐론 가죽</Leather_Nyaron.stuffProps.stuffAdjective> 
+   <Leather_Nyaron.label>Cuir de Nyaron</Leather_Nyaron.label> 
+   <Leather_Nyaron.description>Peau de Nyaron tannée, séchée, écorchée. Beaucoup de personnes trouvent ce matériaux horrifique. D'autres, fascinant. Bien que cuir correct, il ne protège ou isole pas très bien.</Leather_Nyaron.description> 
+   <Leather_Nyaron.stuffProps.stuffAdjective>Cuir de Nyaron</Leather_Nyaron.stuffProps.stuffAdjective>     
 
 </LanguageData>
